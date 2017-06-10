@@ -6,10 +6,9 @@ But Shinoa has everything enabled. Even music! :o
 Thanks to [Kwoth](https://github.com/Kwoth/NadekoBot) for making this awesome bot!
 
 ###Table of content:
-- Commands & Guides:
-    - [Commands List](http://shinoacmdlist.readthedocs.io/en/latest/Commands%20List/)  
-    - [Custom Reactions](http://shinoacmdlist.readthedocs.io/en/latest/Custom%20Reactions/)
-    - [Permission Guide](http://shinoacmdlist.readthedocs.io/en/latest/Permissions%20System/)
+- [Commands List](http://shinoacmdlist.readthedocs.io/en/latest/Commands%20List/)  
+- [Custom Reactions](http://shinoacmdlist.readthedocs.io/en/latest/Custom%20Reactions/)
+- [Permission Guide](http://shinoacmdlist.readthedocs.io/en/latest/Permissions%20System/)
 
 ###Invite Links:	
 **Notice:** These QR-Codes can be scanned with a phone.
