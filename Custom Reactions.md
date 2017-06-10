@@ -8,7 +8,7 @@ You must also use the commands for adding, deleting and listing these reactions 
 ###Commands and Their Use
 | Command Name | Description | Example |
 |:------------:|-------------|---------|
-|`.acr`|Add a custom reaction with a trigger and a response. Running this command in a server requries the Administrator permission. Running this command in DM is Bot Owner only, and adds a new global custom reaction. Guide [here](http://nadekobot.readthedocs.io/en/1.0/Custom%20Reactions/)|`.acr "hello" Hi there, %user%!`|
+|`.acr`|Add a custom reaction with a trigger and a response. Running this command in a server requries the Administrator permission. Running this command in DM is Bot Owner only, and adds a new global custom reaction.|`.acr "hello" Hi there, %user%!`|
 |`.lcr`|Lists a page of global or server custom reactions (15 reactions per page). Running this command in a DM will list the global custom reactions, while running it in a server will list that server's custom reactions.|`.lcr 1`|
 |`.dcr`|Deletes a custom reaction based on the provided index. Running this command in a server requires the Administrator permission. Running this command in DM is Bot Owner only, and will delete a global custom reaction.|`.dcr 5`|
 
