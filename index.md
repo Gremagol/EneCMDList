@@ -1,7 +1,7 @@
 #Shinoa Documentation
 This is the ShinoaBot. It's basically a clone of the NadekoBot.
 
-So, if you want to invite her, by clicking [>>>Here<<<](http://bit.ly/InvShinoa)
+So, if you want to invite her, click [>>>Here<<<](http://bit.ly/InvShinoa)
 
 If you have any questions, ask Gremagol on my Cave by clicking [>>Here<<](http://bit.ly/ShinoaDiscordCave)
 
