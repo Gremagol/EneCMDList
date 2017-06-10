@@ -2,8 +2,9 @@ site_name: Shinoa
 repo_url: https://github.com/Gremagol/ShinoaCMDList
 pages:
 - Home: index.md
-- Commands and Reactions:
+- Commands & Guides:
     - Commands List: Commands List.md   
     - Custom Reactions: Custom Reactions.md
+    - Permission Guide: Permissions System.md
 
 theme: readthedocs
