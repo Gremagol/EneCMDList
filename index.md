@@ -15,5 +15,5 @@ Well it will be a bit empty here so... I hope you don't mind.
 
 I'll work on this later again.
 
-[img1]: http://i.imgur.com/5tIROJ8.png
-[img2]: http://i.imgur.com/lzLvYBP.png
+[img1]: http://i.imgur.com/XwRYbvg.png
+[img2]: http://i.imgur.com/qbWnqfa.png
