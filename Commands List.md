@@ -152,18 +152,18 @@ Commands and aliases | Description | Usage
 `give` | Give someone a certain amount of currency.  | `.give 1 "@SomeGuy"`
 `award` | Awards someone a certain amount of currency.  You can also specify a role name to award currency to all users in a role. **Bot owner only** | `.award 100 @person` or `.award 5 Role Of Gamblers`
 `take` | Takes a certain amount of currency from someone. **Bot owner only** | `.take 1 "@someguy"`
-`betroll` `br` | Bets a certain amount of currency and rolls a dice. Rolling over 66 yields x2 of your currency, over 90 - x4 and 100 x10.  | `.br 5`
+`betroll` `br` | Bets a certain amount of currency and rolls a dice. Rolling over 66 yields x2 of your currency, over 90 - x5 and 100 x10.  | `.br 5`
 `leaderboard` `lb` | Displays the bot's currency leaderboard.  | `.lb`
 `race` | Starts a new animal race.  | `.race`
 `joinrace` `jr` | Joins a new race. You can specify an amount of currency for betting (optional). You will get YourBet*(participants-1) back if you win.  | `.jr` or `.jr 5`
-`startevent` | Starts one of the events seen on public Shinoa. **Bot owner only** | `.startevent flowerreaction`
+`startevent` | Starts one of the events seen on Shinoa. **Bot owner only** | `.startevent flowerreaction`
 `roll` | Rolls 0-100. If you supply a number `X` it rolls up to 30 normal dice. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`. `Y` can be a letter 'F' if you want to roll fate dice instead of dnd.  | `.roll` or `.roll 7` or `.roll 3d5` or `.roll 5dF`
 `rolluo` | Rolls `X` normal dice (up to 30) unordered. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`.  | `.rolluo` or `.rolluo 7` or `.rolluo 3d5`
 `nroll` | Rolls in a given range.  | `.nroll 5` (rolls 0-5) or `.nroll 5-15`
 `draw` | Draws a card from the deck.If you supply number X, she draws up to 5 cards from the deck.  | `.draw` or `.draw 5`
 `shuffle` `sh` | Reshuffles all cards back into the deck.  | `.sh`
 `flip` | Flips coin(s) - heads or tails, and shows an image.  | `.flip` or `.flip 3`
-`betflip` `bf` | Bet to guess will the result be heads or tails. Guessing awards you 1.95x the currency you've bet (rounded up). Multiplier can be changed by the bot owner.  | `.bf 5 heads` or `.bf 3 t`
+`betflip` `bf` | Bet to guess will the result be heads or tails. Guessing awards you 2x the currency you've bet (rounded up). Multiplier can be changed by the bot owner.  | `.bf 5 heads` or `.bf 3 t`
 `shop` | Lists this server's administrators' shop. Paginated.  | `.shop` or `.shop 2`
 `buy` | Buys an item from the shop on a given index. If buying items, make sure that the bot can DM you.  | `.buy 2`
 `shopadd` | Adds an item to the shop by specifying type price and name. Available types are role and list. **Requires Administrator server permission.** | `.shopadd role 1000 Rich`
@@ -171,7 +171,7 @@ Commands and aliases | Description | Usage
 `shoprem` `shoprm` | Removes an item from the shop by its ID. **Requires Administrator server permission.** | `.shoprm 1`
 `slotstats` | Shows the total stats of the slot command for this bot's session. **Bot owner only** | `.slotstats`
 `slottest` | Tests to see how much slots payout for X number of plays. **Bot owner only** | `.slottest 1000`
-`slot` | Play Shinoa slots. Max bet is 9999. 1.5 second cooldown per user.  | `.slot 5`
+`slot` | Play Shinoa slots. Max bet is 10 Millions. 1.5 second cooldown per user.  | `.slot 5`
 `claimwaifu` `claim` | Claim a waifu for yourself by spending currency.  You must spend at least 10% more than her current value unless she set `.affinity` towards you.  | `.claim 50 @Himesama`
 `divorce` | Releases your claim on a specific waifu. You will get some of the money you've spent back unless that waifu has an affinity towards you. 6 hours cooldown.  | `.divorce @CheatingSloot`
 `affinity` | Sets your affinity towards someone you want to be claimed by. Setting affinity will reduce their `.claim` on you by 20%. You can leave second argument empty to clear your affinity. 30 minutes cooldown.  | `.affinity @MyHusband` or `.affinity`
