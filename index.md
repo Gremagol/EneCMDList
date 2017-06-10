@@ -1,15 +1,15 @@
 #Shinoa Documentation
 This is the ShinoaBot. It's basically a clone of the NadekoBot.
 
-So, if you want to invite her, scan or click on the image below:
+**Notice:** These QR-Codes can be scanned with a phone.
+
+So, if you want to invite her, click on the image.
 
 [![img][img2]](http://bit.ly/InvShinoa)
 
-If you have any questions, ask Gremagol on my Cave by clicking on the image below:
+If you have any questions, join Shinoa's cave by clicking the image.
 
 [![img][img1]](http://bit.ly/ShinoaDiscordCave)
-
-You can scan them with your phone too.
 
 Well it will be a bit empty here so... I hope you don't mind.
 
