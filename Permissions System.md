@@ -1,7 +1,7 @@
 Permissions Overview
 ===================
 Have you ever felt confused or even overwhelmed when trying to set Shinoa's permissions? In this guide we will be explaining how to use the 
-permission commands correctly and even cover a few common questions! Every command we discuss here can be found in the [Commands List](http://command-list-for-shinoa.readthedocs.io/en/latest/Commands%20List/#permissions).
+permission commands correctly and even cover a few common questions! Every command we discuss here can be found in the [Commands List](http://shinoacmdlist.readthedocs.io/en/latest/Commands%20List/).
 
 Why do we use the Permissions Commands?
 ------------------------------
@@ -23,7 +23,7 @@ If you would like to set a different role, such as `Admins`, to be the role requ
 
 Basics & Hierarchy
 -----
-The [Commands List](http://command-list-for-shinoa.readthedocs.io/en/latest/Commands%20List/#permissions) is a great resource which lists **all** the available commands, however we'll go over a few commands here.
+The [Commands List](http://shinoacmdlist.readthedocs.io/en/latest/Commands%20List/#permissions) is a great resource which lists **all** the available commands, however we'll go over a few commands here.
 
 Firstly, let's explain how the permissions system works - It's simple once you figure out how each command works!
 The permissions system works as a chain, everytime a command is used, the permissions chain is checked. Starting from the top of the chain, the command is compared to a rule, if it isn't either allowed or disallowed by that rule it proceeds to check the next rule all the way till it reaches the bottom rule, which allows all commands.
