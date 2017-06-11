@@ -8,9 +8,15 @@ You must also use the commands for adding, deleting and listing these reactions 
 ###Commands and Their Use
 | Command Name | Description | Example |
 |:------------:|-------------|---------|
-|`.acr`|Add a custom reaction with a trigger and a response. Running this command in a server requries the Administrator permission. Running this command in DM is Bot Owner only, and adds a new global custom reaction.|`.acr "hello" Hi there, %user%!`|
-|`.lcr`|Lists a page of global or server custom reactions (15 reactions per page). Running this command in a DM will list the global custom reactions, while running it in a server will list that server's custom reactions.|`.lcr 1`|
-|`.dcr`|Deletes a custom reaction based on the provided index. Running this command in a server requires the Administrator permission. Running this command in DM is Bot Owner only, and will delete a global custom reaction.|`.dcr 5`|
+|`acr` | Add a custom reaction with a trigger and a response. Running this command in server requires the Administration permission. Running this command in DM is Gremagol only and adds a new global custom reaction. Guide here: <http://nadekobot.readthedocs.io/en/latest/Custom%20Reactions/>  | `.acr "hello" Hi there %user%`
+|`lcr` | Lists global or server custom reactions (20 commands per page). Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions. Specifying `all` argument instead of the number will DM you a text file with a list of all custom reactions.  | `.lcr 1` or `.lcr all`
+|`lcrg` | Lists global or server custom reactions (20 commands per page) grouped by trigger, and show a number of responses for each. Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions.  | `.lcrg 1`
+|`scr` | Shows a custom reaction's response on a given ID.  | `.scr 1`
+|`dcr` | Deletes a custom reaction on a specific index. If ran in DM, it is Gremagol only and deletes a global custom reaction. If ran in a server, it requires Administration privileges and removes server custom reaction.  | `.dcr 5`
+|`crdm` | Toggles whether the response message of the custom reaction will be sent as a direct message.  | `.crdm 44`
+|`crad` | Toggles whether the message triggering the custom reaction will be automatically deleted.  | `.crad 59`
+|`crstatsclear` | Resets the counters on `.crstats`. You can specify a trigger to clear stats only for that trigger. **Gremagol only** | `.crstatsclear` or `.crstatsclear rng`
+|`crstats` | Shows a list of custom reactions and the number of times they have been executed. Paginated with 10 per page. Use `.crstatsclear` to reset the counters.  | `.crstats` or `.crstats 3`
 
 
 ####Now that we know the commands let's take a look at an example of adding a command with `.acr`,  
