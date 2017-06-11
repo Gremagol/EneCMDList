@@ -86,7 +86,7 @@ Commands and aliases | Description | Usage
 `setstatus` | Sets the bot's status. (Online/Idle/Dnd/Invisible) **Gremagol only** | `.setstatus Idle`
 `setavatar` `setav` | Sets a new avatar image for the ShinoaBot. Argument is a direct link to an image. **Gremagol only** | `.setav http://i.imgur.com/xTG3a1I.jpg`
 `setgame` | Sets the bots game. **Gremagol only** | `.setgame with snakes`
-`setnick` | Changes the nickname of the bot on this server. You can also target other users to change their nickname. Requires ManageNicknames server permission. | `.setnick BotNickname` or `.setnick @SomeUser New Nickname`
+`setnick` | Changes the nickname of the bot on this server. You can also target other users to change their nickname. **Requires ManageNicknames server permission.** | `.setnick BotNickname` or `.setnick @SomeUser New Nickname`
 `setstream` | Sets the bots stream. First argument is the twitch link, second argument is stream name. **Gremagol only** | `.setstream TWITCHLINK Hello`
 `send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`. **Gremagol only** | `.send serverid|c:channelid message` or `.send serverid|u:userid message`
 `announce` | Sends a message to all servers' default channel that bot is connected to. **Gremagol only** | `.announce Useless spam`
