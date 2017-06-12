@@ -405,6 +405,7 @@ Commands and aliases | Description | Usage
 `shardstats` | Stats for shards. Paginated with 25 shards per page.  | `.shardstats` or `.shardstats 2`
 `shardid` | Shows which shard is a certain guild on, by guildid.  | `.shardid 117523346618318850`
 `stats` | Shows some basic stats for Shinoa.  | `.stats`
+`verboseerror` | Toggles whether the bot should print command errors when a command is incorrectly used. **Requires ManageMessages server permission.** | `.verboseerror` or `.ve`
 `showemojis` `se` | Shows a name and a link to every SPECIAL emoji in the message.  | `.se A message full of SPECIAL emojis`
 `listservers` | Lists servers the bot is on with some basic info. 15 per page. **Gremagol only** | `.listservers 3`
 `savechat` | Saves a number of messages to a text file and sends it to you. **Gremagol only** | `.savechat 150`
