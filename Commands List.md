@@ -234,7 +234,7 @@ Commands and aliases | Description | Usage
 `pause` `p` | Pauses or Unpauses the song.  | `.p`
 `fairplay` `fp` | Toggles fairplay. While enabled, the bot will prioritize songs from users who didn't have their song recently played instead of the song's position in the queue.  | `.fp`
 `queue` `q` `yq` | Queue a song using keywords or a link. Bot will join your voice channel. **You must be in a voice channel**.  | `.q Dream Of Venice`
-`queuesearch` | Search for top 5 youtube song result using keywords, and type the index of the song to play that song. Bot will join your voice channel. **You must be in a voice channel.** | `.queuesearch Dream Of Venice` or `.qs Dream Of Venice`
+`queuesearch` `qs` | Search for top 5 youtube song result using keywords, and type the index of the song to play that song. Bot will join your voice channel. **You must be in a voice channel.** | `.queuesearch Dream Of Venice` or `.qs Dream Of Venice`
 `soundcloudqueue` `sq` | Queue a soundcloud song using keywords. Bot will join your voice channel. **You must be in a voice channel**.  | `.sq Dream Of Venice`
 `listqueue` `lq` | Lists 15 currently queued songs per page. Default page is 1.  | `.lq` or `.lq 2`
 `nowplaying` `np` | Shows the song that the bot is currently playing.  | `.np`
