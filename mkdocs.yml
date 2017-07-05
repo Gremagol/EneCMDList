@@ -6,5 +6,6 @@ pages:
     - Commands List: Commands List.md   
     - Custom Reactions: Custom Reactions.md
     - Permission Guide: Permissions System.md
+    - Placeholders: Placeholders.md
 
 theme: readthedocs

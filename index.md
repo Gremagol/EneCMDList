@@ -9,6 +9,7 @@ Thanks to [Kwoth](https://github.com/Kwoth/NadekoBot) for making this awesome bo
 - [Commands List](http://shinoacmdlist.readthedocs.io/en/latest/Commands%20List/)  
 - [Custom Reactions](http://shinoacmdlist.readthedocs.io/en/latest/Custom%20Reactions/)
 - [Permission Guide](http://shinoacmdlist.readthedocs.io/en/latest/Permissions%20System/)
+- [Placeholders](http://shinoacmdlist.readthedocs.io/en/latest/Placeholders/)
 
 ###Invite Links:	
 **Notice:** These QR-Codes can be scanned with a phone.

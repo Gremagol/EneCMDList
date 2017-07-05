@@ -1,7 +1,7 @@
 Permissions Overview
 ===================
 Have you ever felt confused or even overwhelmed when trying to set Shinoa's permissions? In this guide we will be explaining how to use the 
-permission commands correctly and even cover a few common questions! Every command we discuss here can be found in the [Commands List](http://shinoacmdlist.readthedocs.io/en/latest/Commands%20List/).
+permission commands correctly and even cover a few common questions! Every command we discuss here can be found in the [Commands List](http://shinoacmdlist.readthedocs.io/en/latest/Commands%20List/#permissions).
 
 Why do we use the Permissions Commands?
 ------------------------------
@@ -35,7 +35,7 @@ If you want to remove a permission from the chain of permissions, do `.removeper
 As an example, if you wanted to enable NSFW for a certain role, say "Lewd", you could do `.rolemdl NSFW enable Lewd`.
 This adds the rule to the top of the permissions chain so even if the default `.sm NSFW disabled` rule exists, the "Lewd" role will be able to use the NSFW module.
 
-If you want the bot to notify users why they can't use a command or module, use `.verbose true` and Nadeko will tell you what rule is preventing the command.
+If you want the bot to notify users why they can't use a command or module, use `.verbose true` and Shinoa will tell you what rule is preventing the command.
 
 Commonly Asked Questions
 ---------------
