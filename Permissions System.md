@@ -1,7 +1,7 @@
 Permissions Overview
 ===================
-Have you ever felt confused or even overwhelmed when trying to set Shinoa's permissions? In this guide we will be explaining how to use the 
-permission commands correctly and even cover a few common questions! Every command we discuss here can be found in the [Commands List](http://shinoacmdlist.readthedocs.io/en/latest/Commands%20List/#permissions).
+Have you ever felt confused or even overwhelmed when trying to set Ene's permissions? In this guide we will be explaining how to use the 
+permission commands correctly and even cover a few common questions! Every command we discuss here can be found in the [Commands List](http://enecmdlist.readthedocs.io/en/latest/Commands%20List/#permissions).
 
 Why do we use the Permissions Commands?
 ------------------------------
