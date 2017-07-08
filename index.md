@@ -1,5 +1,5 @@
-#Shinoa Documentation
-This is the ShinoaBot. She's basically a clone of the NadekoBot. 
+#Ene Documentation
+This is the Ene-Bot. She's basically a clone of the NadekoBot. 
 
 But Shinoa has everything enabled. Even music! :o
 
@@ -18,9 +18,9 @@ So, if you want to invite her, click on the image.
 
 [![img][img2]](http://bit.ly/InvEne)
 
-If you have any questions, join Shinoa's cave by clicking the image.
+If you have any questions, join Ene's cave by clicking the image.
 
 [![img][img1]](http://bit.ly/EnesCave)
 
-[img1]: http://i.imgur.com/XwRYbvg.png
-[img2]: http://i.imgur.com/qbWnqfa.png
+[img1]: http://i.imgur.com/QQva1vC.png
+[img2]: http://i.imgur.com/v6PFheO.png
