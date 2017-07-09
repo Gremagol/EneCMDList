@@ -1,7 +1,7 @@
 #Ene Documentation
 This is the Ene-Bot. She's basically a clone of the NadekoBot. 
 
-But Shinoa has everything enabled. Even music! :o
+But she has everything enabled. .gc, music, nsfw, etc. :o
 
 Thanks to [Kwoth](https://github.com/Kwoth/NadekoBot) for making this awesome bot!
 

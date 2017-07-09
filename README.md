@@ -1,6 +1,6 @@
 Hello there!
-This is the Ene-Bot. She's basically a clone of the NadekoBot. 
-But Ene has everything enabled. Even music! :o
+This is the Ene-Bot. She's basically a clone of the NadekoBot.  
+But she has everything enabled. .gc, music, nsfw, etc. :o  
 
 You can take a look at the docs, if you want.
 http://enecmdlist.readthedocs.io/en/latest/
