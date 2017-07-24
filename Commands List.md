@@ -1,7 +1,6 @@
 ##Table of contents
 - [Help](#help)
 - [Administration](#administration)
-- [ClashOfClans](#clashofclans)
 - [CustomReactions](#customreactions)
 - [Gambling](#gambling)
 - [Games](#games)
@@ -80,7 +79,7 @@ Commands and aliases | Description | Usage
 `.fwmsgs` | Toggles forwarding of non-command messages sent to bot's DM to the bot owners **Bot owner only** | `.fwmsgs`
 `.fwtoall` | Toggles whether messages will be forwarded to all bot owners or only to the first one specified in the credentials.json file **Bot owner only** | `.fwtoall`
 `.leave` | Makes Ene leave the server. Either server name or server ID is required. **Bot owner only** | `.leave 123123123331`
-`.die` | Shuts the bot down. **Bot owner only** | `.die`
+`.sleep` | Lets the bot have some rest. **Bot owner only** | `.sleep`
 `.setname` `.newnm` | Gives the bot a new name. **Bot owner only** | `.newnm BotName`
 `.setnick` | Changes the nickname of the bot on this server. You can also target other users to change their nickname. **Requires ManageNicknames server permission.** | `.setnick BotNickname` or `.setnick @SomeUser New Nickname`
 `.setstatus` | Sets the bot's status. (Online/Idle/Dnd/Invisible) **Bot owner only** | `.setstatus Idle`
@@ -117,21 +116,6 @@ Commands and aliases | Description | Usage
 
 ###### [Back to ToC](#table-of-contents)
 
-### ClashOfClans  
-Commands and aliases | Description | Usage
-----------------|--------------|-------
-`.createwar` `.cw` | Creates a new war by specifying a size (>10 and multiple of 5) and enemy clan name. **Requires ManageMessages server permission.** | `.cw 15 The Enemy Clan`
-`.startwar` `.sw` | Starts a war with a given number.  | `.sw 15`
-`.listwar` `.lw` | Shows the active war claims by a number. Shows all wars in a short way if no number is specified.  | `.lw [war_number]` or `.lw`
-`.basecall` | Claims a certain base from a certain war. You can supply a name in the third optional argument to claim in someone else's place.  | `.basecall [war_number] [base_number] [optional_other_name]`
-`.callfinish1` `.cf1` | Finish your claim with 1 star if you destroyed a base. First argument is the war number, optional second argument is a base number if you want to finish for someone else.  | `.cf1 1` or `.cf1 1 5`
-`.callfinish2` `.cf2` | Finish your claim with 2 stars if you destroyed a base. First argument is the war number, optional second argument is a base number if you want to finish for someone else.  | `.cf2 1` or `.cf2 1 5`
-`.callfinish` `.cf` | Finish your claim with 3 stars if you destroyed a base. First argument is the war number, optional second argument is a base number if you want to finish for someone else.  | `.cf 1` or `.cf 1 5`
-`.endwar` `.ew` | Ends the war with a given index.  | `.ew [war_number]`
-`.uncall` | Removes your claim from a certain war. Optional second argument denotes a person in whose place to unclaim  | `.uc [war_number] [optional_other_name]`
-
-###### [Back to ToC](#table-of-contents)
-
 ### CustomReactions  
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
@@ -159,7 +143,7 @@ Commands and aliases | Description | Usage
 `.leaderboard` `.lb` | Displays the bot's currency leaderboard.  | `.lb`
 `.race` | Starts a new animal race.  | `.race`
 `.joinrace` `.jr` | Joins a new race. You can specify an amount of currency for betting (optional). You will get YourBet*(participants-1) back if you win.  | `.jr` or `.jr 5`
-`.startevent` | Starts one of the events seen on public Ene. **Bot owner only** | `.startevent flowerreaction`
+`.event` | Starts one of the events seen on public Ene. **Bot owner only** | `.event Coins`
 `.roll` | Rolls 0-100. If you supply a number `X` it rolls up to 30 normal dice. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`. `Y` can be a letter 'F' if you want to roll fate dice instead of dnd.  | `.roll` or `.roll 7` or `.roll 3d5` or `.roll 5dF`
 `.rolluo` | Rolls `X` normal dice (up to 30) unordered. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`.  | `.rolluo` or `.rolluo 7` or `.rolluo 3d5`
 `.nroll` | Rolls in a given range.  | `.nroll 5` (rolls 0-5) or `.nroll 5-15`
@@ -175,7 +159,7 @@ Commands and aliases | Description | Usage
 `.shoprem` `.shoprm` | Removes an item from the shop by its ID. **Requires Administrator server permission.** | `.shoprm 1`
 `.slotstats` | Shows the total stats of the slot command for this bot's session. **Bot owner only** | `.slotstats`
 `.slottest` | Tests to see how much slots payout for X number of plays. **Bot owner only** | `.slottest 1000`
-`.slot` | Play Ene slots. Max bet is 10000000. 1.5 second cooldown per user.  | `.slot 5`
+`.slot` | Play Ene slots. Max bet is 10 mil. 1.5 second cooldown per user.  | `.slot 5`
 `.claimwaifu` `.claim` | Claim a waifu for yourself by spending currency.  You must spend at least 10% more than her current value unless she set `.affinity` towards you.  | `.claim 50 @Himesama`
 `.divorce` | Releases your claim on a specific waifu. You will get some of the money you've spent back unless that waifu has an affinity towards you. 6 hours cooldown.  | `.divorce @CheatingSloot`
 `.affinity` | Sets your affinity towards someone you want to be claimed by. Setting affinity will reduce their `.claim` on you by 20%. You can leave second argument empty to clear your affinity. 30 minutes cooldown.  | `.affinity @MyHusband` or `.affinity`
@@ -187,12 +171,12 @@ Commands and aliases | Description | Usage
 ### Games  
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
-`.leet` | Converts a text to leetspeak with 6 (1-6) severity levels  | `.leet 3 Hello`
 `.choose` | Chooses a thing from a list of things  | `.choose Get up;Sleep;Sleep more`
 `.8ball` | Ask the 8ball a yes/no question.  | `.8ball should I do something`
 `.rps` | Play a game of Rocket-Paperclip-Scissors with Ene.  | `.rps scissors`
 `.rategirl` | Use the universal hot-crazy wife zone matrix to determine the girl's worth. It is everything young men need to know about women. At any moment in time, any woman you have previously located on this chart can vanish from that location and appear anywhere else on the chart.  | `.rategirl @SomeGurl`
 `.linux` | Prints a customizable Linux interjection  | `.linux Spyware Windows`
+`.leet` | Converts a text to leetspeak with 6 (1-6) severity levels  | `.leet 3 Hello`
 `.acrophobia` `.acro` | Starts an Acrophobia game. Second argument is optional round length in seconds. (default is 60)  | `.acro` or `.acro 30`
 `.cleverbot` | Toggles cleverbot session. When enabled, the bot will reply to messages starting with bot mention in the server. Custom reactions starting with %mention% won't work if cleverbot is enabled. **Requires ManageMessages server permission.** | `.cleverbot`
 `.hangmanlist` | Shows a list of hangman term types.  | `.hangmanlist`
@@ -234,14 +218,14 @@ Commands and aliases | Description | Usage
 `.play` `.start` | If no arguments are specified, acts as `.next 1` command. If you specify a song number, it will jump to that song. If you specify a search query, acts as a `.q` command  | `.play` or `.play 5` or `.play Dream Of Venice`
 `.queue` `.q` `.yq` | Queue a song using keywords or a link. Bot will join your voice channel. **You must be in a voice channel**.  | `.q Dream Of Venice`
 `.queuesearch` `.qs` `.yqs` | Search for top 5 youtube song result using keywords, and type the index of the song to play that song. Bot will join your voice channel. **You must be in a voice channel**.  | `.qs Dream Of Venice`
-`.listqueue` `.lq` | Lists 15 currently queued songs per page. Default page is 1.  | `.lq` or `.lq 2`
+`.listqueue` `.lq` | Lists 10 currently queued songs per page. Default page is 1.  | `.lq` or `.lq 2`
 `.next` `.n` | Goes to the next song in the queue. You have to be in the same voice channel as the bot. You can skip multiple songs, but in that case songs will not be requeued if .rcs or .rpl is enabled.  | `.n` or `.n 5`
-`.stop` `.s` | Stops the music and clears the playlist. Stays in the channel.  | `.s`
+`.stop` `.s` | Stops the music and preserves the current song index. Stays in the channel.  | `.s`
 `.destroy` `.d` | Completely stops the music and unbinds the bot from the channel. (may cause weird behaviour)  | `.d`
 `.pause` `.p` | Pauses or Unpauses the song.  | `.p`
 `.volume` `.vol` | Sets the music playback volume (0-100%)  | `.vol 50`
 `.defvol` `.dv` | Sets the default music volume when music playback is started (0-100). Persists through restarts.  | `.dv 80`
-`.songremove` `.srm` | Remove a song by its # in the queue, or 'all' to remove all songs from the queue.  | `.srm 5`
+`.songremove` `.srm` | Remove a song by its # in the queue, or 'all' to remove all songs from the queue and reset the song index.  | `.srm 5`
 `.playlists` `.pls` | Lists all playlists. Paginated, 20 per page. Default page is 0.  | `.pls 1`
 `.deleteplaylist` `.delpls` | Deletes a saved playlist. Works only if you made it or if you are the bot owner.  | `.delpls animu-5`
 `.save` | Saves a playlist under a certain name. Playlist name must be no longer than 20 characters and must not contain dashes.  | `.save classical1`
@@ -280,6 +264,7 @@ Commands and aliases | Description | Usage
 `.gelbooru` | Shows a random hentai image from gelbooru with a given tag. Tag is optional but preferred. (multiple tags are appended with +)  | `.gelbooru yuri+kissing`
 `.boobs` | Real adult content.  | `.boobs`
 `.butts` `.ass` `.butt` | Real adult content.  | `.butts` or `.ass`
+`.nsfwtagbl` `.nsfwtbl` | Toggles whether the tag is blacklisted or not in nsfw searches. Provide no parameters to see the list of blacklisted tags.  | `.nsfwtbl poop`
 
 ###### [Back to ToC](#table-of-contents)
 
@@ -415,11 +400,12 @@ Commands and aliases | Description | Usage
 `.listservers` | Lists servers the bot is on with some basic info. 15 per page. **Bot owner only** | `.listservers 3`
 `.savechat` | Saves a number of messages to a text file and sends it to you. **Bot owner only** | `.savechat 150`
 `.ping` | Ping the bot to see if there are latency issues.  | `.ping`
+`.botconfigedit` `.bce` | Sets one of available bot config settings to a specified value. Use the command without any parameters to get a list of available settings. **Bot owner only** | `.bce CurrencyName b1nzy` or `.bce`
 `.calculate` `.calc` | Evaluate a mathematical expression.  | `.calc 1+1`
 `.calcops` | Shows all available operations in the `.calc` command  | `.calcops`
 `.alias` `.cmdmap` | Create a custom alias for a certain Ene command. Provide no alias to remove the existing one. **Requires Administrator server permission.** | `.alias allin $bf 100 h` or `.alias "linux thingy" >loonix Spyware Windows`
 `.aliaslist` `.cmdmaplist` `.aliases` | Shows the list of currently set aliases. Paginated.  | `.aliaslist` or `.aliaslist 3`
-`.serverinfo` `.sinfo` | Shows info about the server the bot is on. If no channel is supplied, it defaults to current one.  | `.sinfo Some Server`
+`.serverinfo` `.sinfo` | Shows info about the server the bot is on. If no server is supplied, it defaults to current one.  | `.sinfo Some Server`
 `.channelinfo` `.cinfo` | Shows info about the channel. If no channel is supplied, it defaults to current one.  | `.cinfo #some-channel`
 `.userinfo` `.uinfo` | Shows info about the user. If no user is supplied, it defaults a user running the command.  | `.uinfo @SomeUser`
 `.activity` | Checks for spammers. **Bot owner only** | `.activity`
@@ -438,6 +424,10 @@ Commands and aliases | Description | Usage
 `.repeatremove` `.reprm` | Removes a repeating message on a specified index. Use `.repeatlist` to see indexes. **Requires ManageMessages server permission.** | `.reprm 2`
 `.repeat` | Repeat a message every `X` minutes in the current channel. You can instead specify time of day for the message to be repeated at daily (make sure you've set your server's timezone). You can have up to 5 repeating messages on the server in total. **Requires ManageMessages server permission.** | `.repeat 5 Hello there` or `.repeat 17:30 tea time`
 `.repeatlist` `.replst` | Shows currently repeating messages and their indexes. **Requires ManageMessages server permission.** | `.repeatlist`
+`.streamrole` | Sets a role which is monitored for streamers (FromRole), and a role to add if a user from 'FromRole' is streaming (AddRole). When a user from 'FromRole' starts streaming, they will receive an 'AddRole'. Provide no arguments to disable **Requires ManageRoles server permission.** | `.streamrole "Eligible Streamers" "Featured Streams"`
+`.streamrolekw` `.srkw` | Sets keyword which is required in the stream's title in order for the streamrole to apply. Provide no keyword in order to reset. **Requires ManageRoles server permission.** | `.srkw` or `.srkw PUBG`
+`.streamrolebl` `.srbl` | Adds or removes a blacklisted user. Blacklisted users will never receive the stream role. **Requires ManageRoles server permission.** | `.srbl add @b1nzy#1234` or `.srbl rem @b1nzy#1234`
+`.streamrolewl` `.srwl` | Adds or removes a whitelisted user. Whitelisted users will receive the stream role even if they don't have the specified keyword in their stream title. **Requires ManageRoles server permission.** | `.srwl add @b1nzy#1234` or `.srwl rem @b1nzy#1234`
 `.convertlist` | List of the convertible dimensions and currencies.  | `.convertlist`
 `.convert` | Convert quantities. Use `.convertlist` to see supported dimensions and currencies.  | `.convert m km 1000`
 `.verboseerror` `.ve` | Toggles whether the bot should print command errors when a command is incorrectly used. **Requires ManageMessages server permission.** | `.ve`
