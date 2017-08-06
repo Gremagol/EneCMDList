@@ -219,10 +219,10 @@ Commands and aliases | Description | Usage
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
 `.nowplaying` or `.np` | Shows the song that is currently playing | `.nowplaying`
-`.play` <title|URL|subcommand> | Plays the provided song | `.play Opus - Life is life`
+`.play` <title/URL/subcommand> | Plays the provided song | `.play Opus - Life is life`
 `.playlists` | Shows the available playlists | `.playlists`
 `.queue [pagenum]` | Shows the current queue | `.queue 3`
-`.remove <position|ALL>` | Removes a song from the queue | `.remove 14` `.remove all`
+`.remove <position/ALL>` | Removes a song from the queue | `.remove 14` `.remove all`
 `.search <query>` | Searches Youtube for a provided query. Shows up to 4 possible Songs | `.search Life is life`
 `.scsearch <query>` | Searches Soundcloud for a provided query | `.scsearch Zedd`
 `.shuffle` | Shuffles songs you have added | `.shuffle`
