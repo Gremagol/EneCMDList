@@ -222,7 +222,7 @@ Commands and aliases | Description | Usage
 `.play` | Plays the provided song | `.play Opus - Life is life`
 `.playlists` | Shows the available playlists | `.playlists`
 `.queue` | Shows the current queue | `.queue 3`
-`.remove | Removes a song from the queue | `.remove 14` `.remove all`
+`.remove` | Removes a song from the queue | `.remove 14` `.remove all`
 `.search ` | Searches Youtube for a provided query. Shows up to 4 possible Songs | `.search Life is life`
 `.scsearch` | Searches Soundcloud for a provided query | `.scsearch Zedd`
 `.shuffle` | Shuffles songs you have added | `.shuffle`
