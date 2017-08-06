@@ -219,22 +219,22 @@ Commands and aliases | Description | Usage
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
 `.nowplaying` or `.np` | Shows the song that is currently playing | `.nowplaying`
-`.play` <title/URL/subcommand> | Plays the provided song | `.play Opus - Life is life`
+`.play` | Plays the provided song | `.play Opus - Life is life`
 `.playlists` | Shows the available playlists | `.playlists`
-`.queue [pagenum]` | Shows the current queue | `.queue 3`
-`.remove <position/ALL>` | Removes a song from the queue | `.remove 14` `.remove all`
-`.search <query>` | Searches Youtube for a provided query. Shows up to 4 possible Songs | `.search Life is life`
-`.scsearch <query>` | Searches Soundcloud for a provided query | `.scsearch Zedd`
+`.queue` | Shows the current queue | `.queue 3`
+`.remove | Removes a song from the queue | `.remove 14` `.remove all`
+`.search ` | Searches Youtube for a provided query. Shows up to 4 possible Songs | `.search Life is life`
+`.scsearch` | Searches Soundcloud for a provided query | `.scsearch Zedd`
 `.shuffle` | Shuffles songs you have added | `.shuffle`
 `.skip` | Votes to skip the current song | `.skip`
 `.forceskip` | Skips the current song | `.forceskip`
 `.pause` | Pauses the current song | `.pause`
-`.skipto <position>` | Skips to the specified song | `.skipto 5`
+`.skipto` | Skips to the specified song | `.skipto 5`
 `.stop` | Stops the current song and clears the queue | `.stop`
-`.volume [0|150]` | Sets or shows volume | `.volume 50`
-`.setdj <rolename|NONE>` | Sets the DJ role for certain music commands | `.setdj everyone`
-`.settc <channel|NONE>` | Sets the text channel for music commands | `.settc #music`
-`.setvc <channel|NONE>` | Sets the voice channel for playing music | `.setvc Ene-Music`
+`.volume` | Sets or shows volume | `.volume 50`
+`.setdj ` | Sets the DJ role for certain music commands | `.setdj everyone`
+`.settc ` | Sets the text channel for music commands | `.settc #music`
+`.setvc ` | Sets the voice channel for playing music | `.setvc Ene-Music`
 
 ###### [Back to ToC](#table-of-contents)
 
