@@ -124,6 +124,7 @@ Commands and aliases | Description | Usage
 `.listcustreactg` `.lcrg` | Lists global or server custom reactions (20 commands per page) grouped by trigger, and show a number of responses for each. Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions.  | `.lcrg 1`
 `.showcustreact` `.scr` | Shows a custom reaction's response on a given ID.  | `.scr 1`
 `.delcustreact` `.dcr` | Deletes a custom reaction on a specific index. If ran in DM, it is bot owner only and deletes a global custom reaction. If ran in a server, it requires Administration privileges and removes server custom reaction.  | `.dcr 5`
+`.crca` | Toggles whether the custom reaction will trigger if the triggering message contains the keyword (instead of only starting with it).  | `.crca 44`
 `.crdm` | Toggles whether the response message of the custom reaction will be sent as a direct message.  | `.crdm 44`
 `.crad` | Toggles whether the message triggering the custom reaction will be automatically deleted.  | `.crad 59`
 `.crstatsclear` | Resets the counters on `.crstats`. You can specify a trigger to clear stats only for that trigger. **Bot owner only** | `.crstatsclear` or `.crstatsclear rng`
@@ -159,12 +160,13 @@ Commands and aliases | Description | Usage
 `.shoprem` `.shoprm` | Removes an item from the shop by its ID. **Requires Administrator server permission.** | `.shoprm 1`
 `.slotstats` | Shows the total stats of the slot command for this bot's session. **Bot owner only** | `.slotstats`
 `.slottest` | Tests to see how much slots payout for X number of plays. **Bot owner only** | `.slottest 1000`
-`.slot` | Play Ene slots. Max bet is 10 mil. 1.5 second cooldown per user.  | `.slot 5`
+`.slot` | Play Ene slots. Max bet is 10000000. 1.5 second cooldown per user.  | `.slot 5`
 `.claimwaifu` `.claim` | Claim a waifu for yourself by spending currency.  You must spend at least 10% more than her current value unless she set `.affinity` towards you.  | `.claim 50 @Himesama`
 `.divorce` | Releases your claim on a specific waifu. You will get some of the money you've spent back unless that waifu has an affinity towards you. 6 hours cooldown.  | `.divorce @CheatingSloot`
 `.affinity` | Sets your affinity towards someone you want to be claimed by. Setting affinity will reduce their `.claim` on you by 20%. You can leave second argument empty to clear your affinity. 30 minutes cooldown.  | `.affinity @MyHusband` or `.affinity`
 `.waifus` `.waifulb` | Shows top 9 waifus. You can specify another page to show other waifus.  | `.waifus` or `.waifulb 3`
 `.waifuinfo` `.waifustats` | Shows waifu stats for a target person. Defaults to you if no user is provided.  | `.waifuinfo @MyCrush` or `.waifuinfo`
+`.wheeloffortune` `.wheel` | Bets a certain amount of currency on the wheel of fortune. Wheel can stop on one of many different multipliers. Won amount is rounded down to the nearest whole number.  | `.wheel 5`
 
 ###### [Back to ToC](#table-of-contents)
 
@@ -182,6 +184,7 @@ Commands and aliases | Description | Usage
 `.hangmanlist` | Shows a list of hangman term types.  | `.hangmanlist`
 `.hangman` | Starts a game of hangman in the channel. Use `.hangmanlist` to see a list of available term types. Defaults to 'all'.  | `.hangman` or `.hangman movies`
 `.hangmanstop` | Stops the active hangman game on this channel if it exists.  | `.hangmanstop`
+`.nunchi` | Creates or joins an existing nunchi game. Users have to count up by 1 from the starting number shown by the bot. If someone makes a mistake (types an incorrent number, or repeats the same number) they are out of the game and a new round starts without them.  Minimum 3 users required.  | `.nunchi`
 `.pick` | Picks the currency planted in this channel. 60 seconds cooldown.  | `.pick`
 `.plant` | Spend an amount of currency to plant it in this channel. Default is 1. (If bot is restarted or crashes, the currency will be lost)  | `.plant` or `.plant 5`
 `.gencurrency` `.gc` | Toggles currency generation on this channel. Every posted message will have chance to spawn currency. Chance is specified by the Bot Owner. (default is 2%) **Requires ManageMessages server permission.** | `.gc`
@@ -215,38 +218,23 @@ Commands and aliases | Description | Usage
 ### Music  
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
-`.play` `.start` | If no arguments are specified, acts as `.next 1` command. If you specify a song number, it will jump to that song. If you specify a search query, acts as a `.q` command  | `.play` or `.play 5` or `.play Dream Of Venice`
-`.queue` `.q` `.yq` | Queue a song using keywords or a link. Bot will join your voice channel. **You must be in a voice channel**.  | `.q Dream Of Venice`
-`.queuesearch` `.qs` `.yqs` | Search for top 5 youtube song result using keywords, and type the index of the song to play that song. Bot will join your voice channel. **You must be in a voice channel**.  | `.qs Dream Of Venice`
-`.listqueue` `.lq` | Lists 10 currently queued songs per page. Default page is 1.  | `.lq` or `.lq 2`
-`.next` `.n` | Goes to the next song in the queue. You have to be in the same voice channel as the bot. You can skip multiple songs, but in that case songs will not be requeued if .rcs or .rpl is enabled.  | `.n` or `.n 5`
-`.stop` `.s` | Stops the music and preserves the current song index. Stays in the channel.  | `.s`
-`.destroy` `.d` | Completely stops the music and unbinds the bot from the channel. (may cause weird behaviour)  | `.d`
-`.pause` `.p` | Pauses or Unpauses the song.  | `.p`
-`.volume` `.vol` | Sets the music playback volume (0-100%)  | `.vol 50`
-`.defvol` `.dv` | Sets the default music volume when music playback is started (0-100). Persists through restarts.  | `.dv 80`
-`.songremove` `.srm` | Remove a song by its # in the queue, or 'all' to remove all songs from the queue and reset the song index.  | `.srm 5`
-`.playlists` `.pls` | Lists all playlists. Paginated, 20 per page. Default page is 0.  | `.pls 1`
-`.deleteplaylist` `.delpls` | Deletes a saved playlist. Works only if you made it or if you are the bot owner.  | `.delpls animu-5`
-`.save` | Saves a playlist under a certain name. Playlist name must be no longer than 20 characters and must not contain dashes.  | `.save classical1`
-`.load` | Loads a saved playlist using its ID. Use `.pls` to list all saved playlists and `.save` to save new ones.  | `.load 5`
-`.fairplay` `.fp` | Toggles fairplay. While enabled, the bot will prioritize songs from users who didn't have their song recently played instead of the song's position in the queue.  | `.fp`
-`.soundcloudqueue` `.sq` | Queue a soundcloud song using keywords. Bot will join your voice channel. **You must be in a voice channel**.  | `.sq Dream Of Venice`
-`.soundcloudpl` `.scpl` | Queue a Soundcloud playlist using a link.  | `.scpl soundcloudseturl`
-`.nowplaying` `.np` | Shows the song that the bot is currently playing.  | `.np`
-`.shuffle` `.sh` `.plsh` | Shuffles the current playlist.  | `.plsh`
-`.playlist` `.pl` | Queues up to 500 songs from a youtube playlist specified by a link, or keywords.  | `.pl playlist link or name`
-`.radio` `.ra` | Queues a radio stream from a link. It can be a direct mp3 radio stream, .m3u, .pls .asx or .xspf (Usage Video: <https://streamable.com/al54>)  | `.ra radio link here`
-`.local` `.lo` | Queues a local file by specifying a full path. **Bot owner only** | `.lo C:/music/mysong.mp3`
-`.localplaylst` `.lopl` | Queues all songs from a directory. **Bot owner only** | `.lopl C:/music/classical`
-`.move` `.mv` | Moves the bot to your voice channel. (works only if music is already playing)  | `.mv`
-`.movesong` `.ms` | Moves a song from one position to another.  | `.ms 5>3`
-`.setmaxqueue` `.smq` | Sets a maximum queue size. Supply 0 or no argument to have no limit.  | `.smq 50` or `.smq`
-`.setmaxplaytime` `.smp` | Sets a maximum number of seconds (>14) a song can run before being skipped automatically. Set 0 to have no limit.  | `.smp 0` or `.smp 270`
-`.reptcursong` `.rcs` | Toggles repeat of current song.  | `.rcs`
-`.rpeatplaylst` `.rpl` | Toggles repeat of all songs in the queue (every song that finishes is added to the end of the queue).  | `.rpl`
-`.autoplay` `.ap` | Toggles autoplay - When the song is finished, automatically queue a related Youtube song. (Works only for Youtube songs and when queue is empty)  | `.ap`
-`.setmusicchannel` `.smch` | Sets the current channel as the default music output channel. This will output playing, finished, paused and removed songs to that channel instead of the channel where the first song was queued in. **Requires ManageMessages server permission.** | `.smch`
+`.nowplaying` or `.np` | Shows the song that is currently playing | `.nowplaying`
+`.play` <title|URL|subcommand> | Plays the provided song | `.play Opus - Life is life`
+`.playlists` | Shows the available playlists | `.playlists`
+`.queue [pagenum]` | Shows the current queue | `.queue 3`
+`.remove <position|ALL>` | Removes a song from the queue | `.remove 14` `.remove all`
+`.search <query>` | Searches Youtube for a provided query. Shows up to 4 possible Songs | `.search Life is life`
+`.scsearch <query>` | Searches Soundcloud for a provided query | `.scsearch Zedd`
+`.shuffle` | Shuffles songs you have added | `.shuffle`
+`.skip` | Votes to skip the current song | `.skip`
+`.forceskip` | Skips the current song | `.forceskip`
+`.pause` | Pauses the current song | `.pause`
+`.skipto <position>` | Skips to the specified song | `.skipto 5`
+`.stop` | Stops the current song and clears the queue | `.stop`
+`.volume [0|150]` | Sets or shows volume | `.volume 50`
+`.setdj <rolename|NONE>` | Sets the DJ role for certain music commands | `.setdj everyone`
+`.settc <channel|NONE>` | Sets the text channel for music commands | `.settc #music`
+`.setvc <channel|NONE>` | Sets the voice channel for playing music | `.setvc Ene-Music`
 
 ###### [Back to ToC](#table-of-contents)
 
