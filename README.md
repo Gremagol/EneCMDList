@@ -2,6 +2,7 @@ Hello there!
 This is the Ene-Bot. She's basically a clone of the NadekoBot.   
 But Ene has a changed Source and a custom Music Module! :o  
 
+[![Discord](https://discordapp.com/api/guilds/284977269892448268/widget.png)](http://bit.ly/EnesDiscordCave)
 [![Ene0](http://i.imgur.com/mi5GQ9p.png)](http://bit.ly/EnesDiscordCave)
 [![Ene1](http://i.imgur.com/Yutcsal.png)](http://bit.ly/InvEne)
 [![Ene2](http://i.imgur.com/HmjZ8mg.png)](http://bit.ly/EnesDiscordCave)
