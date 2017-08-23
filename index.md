@@ -20,7 +20,7 @@ So, if you want to invite her, click on the image.
 
 If you have any questions, join Ene's cave by clicking the image.
 
-[![img][img1]](http://bit.ly/EnesDiscordCave)
+[![img][img1]](https://discord.gg/8kBW525)
 
-[img1]: http://i.imgur.com/QQva1vC.png
+[img1]: http://i.imgur.com/ULim9Ph.png
 [img2]: http://i.imgur.com/v6PFheO.png
