@@ -419,3 +419,32 @@ Commands and aliases | Description | Usage
 `.convertlist` | List of the convertible dimensions and currencies.  | `.convertlist`
 `.convert` | Convert quantities. Use `.convertlist` to see supported dimensions and currencies.  | `.convert m km 1000`
 `.verboseerror` `.ve` | Toggles whether the bot should print command errors when a command is incorrectly used. **Requires ManageMessages server permission.** | `.ve`
+
+###### [Back to ToC](#table-of-contents)
+
+### XP  
+Commands and aliases | Description | Usage
+----------------|--------------|-------
+`.experience` `.xp` | Shows your xp stats. Specify the user to show that user's stats instead.  | `.xp`
+`.xprolerewards` `.xprrs` | Shows currently set role rewards.  | `.xprrs`
+`.xprolereward` `.xprr` | Sets a role reward on a specified level. **Requires ManageRoles server permission.** | `.xprr 3 Social`
+`.xpnotify` `.xpn` | Sets how the bot should notify you when you get a `server` or `global` level. You can set `dm` (for the bot to send a direct message), `channel` (to get notified in the channel you sent the last message in) or `none` to disable.  | `.xpn global dm` `.xpn server channel`
+`.xpexclude` `.xpex` | Exclude a user or a role from the xp system, or whole current server. **Requires Administrator server permission.** | `.xpex User @b1nzy` `.xpex Server`
+`.xpexclusionlist` `.xpexl` | Shows the roles and channels excluded from the XP system on this server, as well as whether the whole server is excluded.  | `.xpexl`
+`.xpleaderboard` `.xplb` | Shows current server's xp leaderboard.  | `.xplb`
+`.xpgleaderboard` `.xpglb` | Shows current server's xp leaderboard.  | `.xpglb`
+`.xpadd` | Adds xp to a user on the server. This does not affect their global ranking. You can use negative values. **Requires Administrator server permission.** | `.xpadd 100 @b1nzy`
+`.clubcreate` | Creates a club. You must be atleast level 5 and not be in the club already.  | `.clubcreate b1nzy's friends`
+`.clubicon` | Sets the club icon.  | `.clubicon https://i.imgur.com/htfDMfU.png`
+`.clubinfo` | Shows information about the club.  | `.clubinfo b1nzy's friends#123`
+`.clubbans` | Shows the list of users who have banned from your club. Paginated. You must be club owner to use this command.  | `.clubbans 2`
+`.clubapps` | Shows the list of users who have applied to your club. Paginated. You must be club owner to use this command.  | `.clubapps 2`
+`.clubapply` | Apply to join a club. You must meet that club's minimum level requirement, and not be on its ban list.  | `.clubapply b1nzy's friends#123`
+`.clubaccept` | Apply to join a club. You must meet that club's minimum level requirement, and not be on its ban list.  | `.clubaccept b1nzy#1337`
+`.clubleave` | Leaves the club you're currently in.  | `.clubleave`
+`.clubkick` | Kicks the user from the club. You must be the club owner. They will be able to apply again.  | `.clubkick b1nzy#1337`
+`.clubban` | Bans the user from the club. You must be the club owner. They will not be able to apply again.  | `.clubban b1nzy#1337`
+`.clubunban` | Unbans the previously banned user from the club. You must be the club owner.  | `.clubunban b1nzy#1337`
+`.clublevelreq` | Sets the club required level to apply to join the club. You must be club owner. You can't set this number below 5.  | `.clublevelreq 7`
+`.clubdisband` | Disbands the club you're the owner of. This action is irreversible.  | `.clubdisband`
+`.clublb` | Shows club rankings on the specified page.  | `.clublb 2`
