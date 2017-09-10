@@ -10,6 +10,7 @@
 - [Pokemon](#pokemon)
 - [Searches](#searches)
 - [Utility](#utility)
+- [XP](#xp)
 
 
 ### Administration  
