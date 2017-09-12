@@ -441,7 +441,7 @@ Commands and aliases | Description | Usage
 `.clubbans` | Shows the list of users who have banned from your club. Paginated. You must be club owner to use this command.  | `.clubbans 2`
 `.clubapps` | Shows the list of users who have applied to your club. Paginated. You must be club owner to use this command.  | `.clubapps 2`
 `.clubapply` | Apply to join a club. You must meet that club's minimum level requirement, and not be on its ban list.  | `.clubapply b1nzy's friends#123`
-`.clubaccept` | Apply to join a club. You must meet that club's minimum level requirement, and not be on its ban list.  | `.clubaccept b1nzy#1337`
+`.clubaccept` | Accept a user who applied to your club.  | `.clubaccept b1nzy#1337`
 `.clubleave` | Leaves the club you're currently in.  | `.clubleave`
 `.clubkick` | Kicks the user from the club. You must be the club owner. They will be able to apply again.  | `.clubkick b1nzy#1337`
 `.clubban` | Bans the user from the club. You must be the club owner. They will not be able to apply again.  | `.clubban b1nzy#1337`
