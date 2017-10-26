@@ -230,7 +230,7 @@ Commands and aliases | Description | Usage
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
 `.nowplaying` or `.np` | Shows the song that is currently playing | `.nowplaying`
-`.play` <title/URL/subcommand> | Plays the provided song | `.play Opus - Life is life`
+`.play` <title|URL|subcommand> | Plays the provided song | `.play Opus - Life is life`
 `.playlists` | Shows the available playlists | `.playlists`
 `.queue [pagenum]` | Shows the current queue | `.queue 3`
 `.remove <position|ALL>` | Removes a song from the queue | `.remove 14` `.remove all`
@@ -242,7 +242,7 @@ Commands and aliases | Description | Usage
 `.pause` | Pauses the current song | `.pause`
 `.skipto <position>` | Skips to the specified song | `.skipto 5`
 `.stop` | Stops the current song and clears the queue | `.stop`
-`.volume [0|150]` | Sets or shows volume | `.volume 50`
+`.volume [0-150]` | Sets or shows volume | `.volume 50`
 `.setdj <rolename|NONE>` | Sets the DJ role for certain music commands | `.setdj everyone`
 `.settc <channel|NONE>` | Sets the text channel for music commands | `.settc #music`
 `.setvc <channel|NONE>` | Sets the voice channel for playing music | `.setvc Ene-Music`
