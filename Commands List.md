@@ -10,8 +10,7 @@
 - [Pokemon](#pokemon)
 - [Searches](#searches)
 - [Utility](#utility)
-- [XP](#xp)
-
+- [Xp](#xp)
 
 ### Administration  
 Commands and aliases | Description | Usage
@@ -36,16 +35,20 @@ Commands and aliases | Description | Usage
 `.donators` | List of the lovely people who donated to keep this project alive.  | `.donators`
 `.donadd` | Add a donator to the database. **Gremagol Only** | `.donadd Donate Amount`
 `.autoassignrole` `.aar` | Automaticaly assigns a specified role to every user who joins the server. **Requires ManageRoles server permission.** | `.aar to disable` or `.aar Role Name to enable`
+`.execsql` | Executes an sql command and returns the number of affected rows. Dangerous. **Gremagol Only** | `.execsql UPDATE Currency SET Amount=Amount+1234`
+`.deletewaifus` | Deletes everything from WaifuUpdates and WaifuInfo tables. **Gremagol Only** | `.deletewaifus`
+`.deletecurrency` | Deletes everything from Currency and CurrencyTransactions. **Gremagol Only** | `.deletecurrency`
+`.deleteplaylists` | Deletes everything from MusicPlaylists. **Gremagol Only** | `.deleteplaylists`
+`.deleteexp` | deleteexp **Gremagol Only** | `deleteexp`
 `.gvc` | Toggles game voice channel feature in the voice channel you're currently in. Users who join the game voice channel will get automatically redirected to the voice channel with the name of their current game, if it exists. Can't move users to channels that the bot has no connect permission for. One per server. **Requires Administrator server permission.** | `.gvc`
 `.languageset` `.langset` | Sets this server's response language. If bot's response strings have been translated to that language, bot will use that language in this server. Reset by using `default` as the locale name. Provide no arguments to see currently set language.  | `.langset de-DE ` or `.langset default`
 `.langsetdefault` `.langsetd` | Sets the bot's default response language. All servers which use a default locale will use this one. Setting to `default` will use the host's current culture. Provide no arguments to see currently set language.  | `.langsetd en-US` or `.langsetd default`
 `.languageslist` `.langli` | List of languages for which translation (or part of it) exist atm.  | `.langli`
-`.logserver` | Enables or Disables ALL log events. If enabled, all log events will log to this channel. **Requires Administrator server permission.** **Gremagol Only** | `.logserver enable` or `.logserver disable`
-`.logignore` | Toggles whether the `.logserver` command ignores this channel. Useful if you have hidden admin channel and public log channel. **Requires Administrator server permission.** **Gremagol Only** | `.logignore`
-`.logevents` | Shows a list of all events you can subscribe to with `.log` **Requires Administrator server permission.** **Gremagol Only** | `.logevents`
-`.log` | Toggles logging event. Disables it if it is active anywhere on the server. Enables if it isn't active. Use `.logevents` to see a list of all events you can subscribe to. **Requires Administrator server permission.** **Gremagol Only** | `.log userpresence` or `.log userbanned`
-`.migratedata` | Migrate data from old bot configuration **Gremagol Only** | `.migratedata`
-`.setmuterole` | Sets a name of the role which will be assigned to people who should be muted. Default is nadeko-mute. **Requires ManageRoles server permission.** | `.setmuterole Silenced`
+`.logserver` | Enables or Disables ALL log events. If enabled, all log events will log to this channel. **Requires Administrator server permission.** | `.logserver enable` or `.logserver disable`
+`.logignore` | Toggles whether the `.logserver` command ignores this channel. Useful if you have hidden admin channel and public log channel. **Requires Administrator server permission.** | `.logignore`
+`.logevents` | Shows a list of all events you can subscribe to with `.log` **Requires Administrator server permission.** | `.logevents`
+`.log` | Toggles logging event. Disables it if it is active anywhere on the server. Enables if it isn't active. Use `.logevents` to see a list of all events you can subscribe to. **Requires Administrator server permission.** | `.log userpresence` or `.log userbanned`
+`.setmuterole` | Sets a name of the role which will be assigned to people who should be muted. Default is ene-mute. **Requires ManageRoles server permission.** | `.setmuterole Silenced`
 `.mute` | Mutes a mentioned user both from speaking and chatting. You can also specify time in minutes (up to 1440) for how long the user should be muted. **Requires ManageRoles server permission.** **Requires MuteMembers server permission.** | `.mute @Someone` or `.mute 30 @Someone`
 `.unmute` | Unmutes a mentioned user previously muted with `.mute` command. **Requires ManageRoles server permission.** **Requires MuteMembers server permission.** | `.unmute @Someone`
 `.chatmute` | Prevents a mentioned user from chatting in text channels. **Requires ManageRoles server permission.** | `.chatmute @Someone`
@@ -59,17 +62,17 @@ Commands and aliases | Description | Usage
 `.prefix` | Sets this server's prefix for all bot commands. Provide no arguments to see the current server prefix.  | `.prefix +`
 `.defprefix` | Sets bot's default prefix for all bot commands. Provide no arguments to see the current default prefix. This will not change this server's current prefix. **Gremagol Only** | `.defprefix +`
 `.antiraid` | Sets an anti-raid protection on the server. First argument is number of people which will trigger the protection. Second one is a time interval in which that number of people needs to join in order to trigger the protection, and third argument is punishment for those people (Kick, Ban, Mute) **Requires Administrator server permission.** | `.antiraid 5 20 Kick`
-`.antispam` | Stops people from repeating same message X times in a row. You can specify to either mute, kick or ban the offenders. Max message count is 10. **Requires Administrator server permission.** | `.antispam 3 Mute` or `.antispam 4 Kick` or `.antispam 6 Ban`
+`.antispam` | Stops people from repeating same message X times in a row. You can specify to either mute, kick or ban the offenders. If you're using mute, you can add a number of seconds at the end to use a timed mute. Max message count is 10. **Requires Administrator server permission.** | `.antispam 3 Mute` or `.antispam 4 Kick` or `.antispam 6 Ban`
 `.antispamignore` | Toggles whether antispam ignores current channel. Antispam must be enabled. **Requires Administrator server permission.** | `.antispamignore`
 `.antilist` `.antilst` | Shows currently enabled protection features.  | `.antilist`
 `.prune` `.clear` | `.prune` removes all Ene's messages in the last 100 messages. `.prune X` removes last `X` number of messages from the channel (up to 100). `.prune @Someone` removes all Someone's messages in the last 100 messages. `.prune @Someone X` removes last `X` number of 'Someone's' messages in the channel.  | `.prune` or `.prune 5` or `.prune @Someone` or `.prune @Someone X`
 `.slowmode` | Toggles slowmode. Disable by specifying no parameters. To enable, specify a number of messages each user can send, and an interval in seconds. For example 1 message every 5 seconds. **Requires ManageMessages server permission.** | `.slowmode 1 5` or `.slowmode`
 `.slowmodewl` | Ignores a role or a user from the slowmode feature. **Requires ManageMessages server permission.** | `.slowmodewl SomeRole` or `.slowmodewl AdminDude`
 `.adsarm` | Toggles the automatic deletion of confirmations for `.iam` and `.iamn` commands. **Requires ManageMessages server permission.** | `.adsarm`
-`.asar` | Adds a role to the list of self-assignable roles. **Requires ManageRoles server permission.** | `.asar Gamer`
+`.asar` | Adds a role to the list of self-assignable roles. You can also specify a group. If 'Exclusive self-assignable roles' feature is enabled, users will be able to pick one role per group. **Requires ManageRoles server permission.** | `.asar Gamer` or `.asar 1 Alliance` or `.asar 1 Horde`
 `.rsar` | Removes a specified role from the list of self-assignable roles. **Requires ManageRoles server permission.** | `.rsar`
 `.lsar` | Lists all self-assignable roles.  | `.lsar`
-`.togglexclsar` `.tesar` | Toggles whether the self-assigned roles are exclusive. (So that any person can have only one of the self assignable roles) **Requires ManageRoles server permission.** | `.tesar`
+`.togglexclsar` `.tesar` | Toggles whether the self-assigned roles are exclusive. While enabled, users can only have one self-assignable role per group. **Requires ManageRoles server permission.** | `.tesar`
 `.iam` | Adds a role to you that you choose. Role must be on a list of self-assignable roles.  | `.iam Gamer`
 `.iamnot` `.iamn` | Removes a specified role from you. Role must be on a list of self-assignable roles.  | `.iamn Gamer`
 `.scadd` | Adds a command to the list of commands which will be executed automatically in the current channel, in the order they were added in, by the bot when it startups up. **Gremagol Only** | `.scadd .stats`
@@ -79,23 +82,26 @@ Commands and aliases | Description | Usage
 `.scclr` | Removes all startup commands. **Gremagol Only** | `.scclr`
 `.fwmsgs` | Toggles forwarding of non-command messages sent to bot's DM to the bot owners **Gremagol Only** | `.fwmsgs`
 `.fwtoall` | Toggles whether messages will be forwarded to all bot owners or only to the first one specified in the credentials.json file **Gremagol Only** | `.fwtoall`
+`.shardstats` | Stats for shards. Paginated with 25 shards per page.  | `.shardstats` or `.shardstats 2`
+`.restartshard` | Try (re)connecting a shard with a certain shardid when it dies. No one knows will it work. Keep an eye on the console for errors. **Gremagol Only** | `.restartshard 2`
 `.leave` | Makes Ene leave the server. Either server name or server ID is required. **Gremagol Only** | `.leave 123123123331`
-`.die` | Shuts the bot down. **Gremagol Only** | `.die`
+`.sleep` | Shuts the bot down. **Gremagol Only** | `.sleep`
+`.restart` | Restarts the bot. Might not work. **Gremagol Only** | `.restart`
 `.setname` `.newnm` | Gives the bot a new name. **Gremagol Only** | `.newnm BotName`
 `.setnick` | Changes the nickname of the bot on this server. You can also target other users to change their nickname. **Requires ManageNicknames server permission.** | `.setnick BotNickname` or `.setnick @SomeUser New Nickname`
 `.setstatus` | Sets the bot's status. (Online/Idle/Dnd/Invisible) **Gremagol Only** | `.setstatus Idle`
 `.setavatar` `.setav` | Sets a new avatar image for the EneBot. Argument is a direct link to an image. **Gremagol Only** | `.setav http://i.imgur.com/xTG3a1I.jpg`
-`.setgame` | Sets the bots game. **Gremagol Only** | `.setgame with snakes`
+`.game` | Sets the bots game. **Gremagol Only** | `.setgame with snakes`
 `.setstream` | Sets the bots stream. First argument is the twitch link, second argument is stream name. **Gremagol Only** | `.setstream TWITCHLINK Hello`
 `.send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`. **Gremagol Only** | `.send serverid|c:channelid message` or `.send serverid|u:userid message`
 `.reloadimages` | Reloads images bot is using. Safe to use even when bot is being used heavily. **Gremagol Only** | `.reloadimages`
 `.greetdel` `.grdel` | Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. **Requires ManageServer server permission.** | `.greetdel 0` or `.greetdel 30`
 `.greet` | Toggles anouncements on the current channel when someone joins the server. **Requires ManageServer server permission.** | `.greet`
-`.greetmsg` | Sets a new join announcement message which will be shown in the server's channel. Type `%user%` if you want to mention the new member. Using it with no message will show the current greet message. You can use embed json from <http://gremagol.com/embed-generator/> instead of a regular text, if you want the message to be embedded. **Requires ManageServer server permission.** | `.greetmsg Welcome, %user%.`
+`.greetmsg` | Sets a new join announcement message which will be shown in the server's channel. Type `%user%` if you want to mention the new member. Using it with no message will show the current greet message. You can use embed json from <https://gremagol.com/embed-generator/> instead of a regular text, if you want the message to be embedded. **Requires ManageServer server permission.** | `.greetmsg Welcome, %user%.`
 `.greetdm` | Toggles whether the greet messages will be sent in a DM (This is separate from greet - you can have both, any or neither enabled). **Requires ManageServer server permission.** | `.greetdm`
-`.greetdmmsg` | Sets a new join announcement message which will be sent to the user who joined. Type `%user%` if you want to mention the new member. Using it with no message will show the current DM greet message. You can use embed json from <http://gremagol.com/embed-generator/> instead of a regular text, if you want the message to be embedded. **Requires ManageServer server permission.** | `.greetdmmsg Welcome to the server, %user%`
+`.greetdmmsg` | Sets a new join announcement message which will be sent to the user who joined. Type `%user%` if you want to mention the new member. Using it with no message will show the current DM greet message. You can use embed json from <https://gremagol.com/embed-generator/> instead of a regular text, if you want the message to be embedded. **Requires ManageServer server permission.** | `.greetdmmsg Welcome to the server, %user%`
 `.bye` | Toggles anouncements on the current channel when someone leaves the server. **Requires ManageServer server permission.** | `.bye`
-`.byemsg` | Sets a new leave announcement message. Type `%user%` if you want to show the name the user who left. Type `%id%` to show id. Using this command with no message will show the current bye message. You can use embed json from <http://gremagol.com/embed-generator/> instead of a regular text, if you want the message to be embedded. **Requires ManageServer server permission.** | `.byemsg %user% has left.`
+`.byemsg` | Sets a new leave announcement message. Type `%user%` if you want to show the name the user who left. Type `%id%` to show id. Using this command with no message will show the current bye message. You can use embed json from <https://gremagol.com/embed-generator/> instead of a regular text, if you want the message to be embedded. **Requires ManageServer server permission.** | `.byemsg %user% has left.`
 `.byedel` | Sets the time it takes (in seconds) for bye messages to be auto-deleted. Set it to `0` to disable automatic deletion. **Requires ManageServer server permission.** | `.byedel 0` or `.byedel 30`
 `.timezones` | Lists all timezones available on the system to be used with `.timezone`.  | `.timezones`
 `.timezone` | Sets this guilds timezone. This affects bot's time output in this server (logs, etc..)  | `.timezone` or `.timezone GMT Standard Time`
@@ -119,11 +125,12 @@ Commands and aliases | Description | Usage
 ### CustomReactions  
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
-`.addcustreact` `.acr` | Add a custom reaction with a trigger and a response. Running this command in server requires the Administration permission. Running this command in DM is Bot Owner only and adds a new global custom reaction. Guide here: <http://enecmdlist.readthedocs.io/en/latest/Custom%20Reactions/>  | `.acr "hello" Hi there %user%`
+`.addcustreact` `.acr` | Add a custom reaction with a trigger and a response. Running this command in server requires the Administration permission. Running this command in DM is Gremagol Only and adds a new global custom reaction. Guide here: <http://enecmdlist.readthedocs.io/en/latest/Custom%20Reactions/>  | `.acr "hello" Hi there %user%`
+`.editcustreact` `.ecr` | Edits the custom reaction's response given its ID.  | `.ecr 123 I'm a magical girl`
 `.listcustreact` `.lcr` | Lists global or server custom reactions (20 commands per page). Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions. Specifying `all` argument instead of the number will DM you a text file with a list of all custom reactions.  | `.lcr 1` or `.lcr all`
 `.listcustreactg` `.lcrg` | Lists global or server custom reactions (20 commands per page) grouped by trigger, and show a number of responses for each. Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions.  | `.lcrg 1`
 `.showcustreact` `.scr` | Shows a custom reaction's response on a given ID.  | `.scr 1`
-`.delcustreact` `.dcr` | Deletes a custom reaction on a specific index. If ran in DM, it is bot owner only and deletes a global custom reaction. If ran in a server, it requires Administration privileges and removes server custom reaction.  | `.dcr 5`
+`.delcustreact` `.dcr` | Deletes a custom reaction on a specific index. If ran in DM, it is Gremagol Only and deletes a global custom reaction. If ran in a server, it requires Administration privileges and removes server custom reaction.  | `.dcr 5`
 `.crca` | Toggles whether the custom reaction will trigger if the triggering message contains the keyword (instead of only starting with it).  | `.crca 44`
 `.crdm` | Toggles whether the response message of the custom reaction will be sent as a direct message.  | `.crdm 44`
 `.crad` | Toggles whether the message triggering the custom reaction will be automatically deleted.  | `.crad 59`
@@ -144,10 +151,11 @@ Commands and aliases | Description | Usage
 `.leaderboard` `.lb` | Displays the bot's currency leaderboard.  | `.lb`
 `.race` | Starts a new animal race.  | `.race`
 `.joinrace` `.jr` | Joins a new race. You can specify an amount of currency for betting (optional). You will get YourBet*(participants-1) back if you win.  | `.jr` or `.jr 5`
-`.event` | Starts one of the events seen on public Ene. `reaction` and `sneakygamestatus` are the only 2 available now. **Gremagol Only** | `.event reaction`
+`.event` | Starts one of the events seen on public Ene. `reaction` and `sneakygamestatus` are the only 2 available now. **Gremagol Only** | `.startevent reaction`
+`.rafflecur` | Starts or joins a currency raffle with a specified amount. Users who join the raffle will lose the amount of currency specified and add it to the pot. After 30 seconds, random winner will be selected who will receive the whole pot. There is also a `mixed` mode in which the users will be able to join the game with any amount of currency, and have their chances be proportional to the amount they've bet.  | `.rafflecur 20` or `.rafflecur mixed 15`
 `.roll` | Rolls 0-100. If you supply a number `X` it rolls up to 30 normal dice. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`. `Y` can be a letter 'F' if you want to roll fate dice instead of dnd.  | `.roll` or `.roll 7` or `.roll 3d5` or `.roll 5dF`
 `.rolluo` | Rolls `X` normal dice (up to 30) unordered. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`.  | `.rolluo` or `.rolluo 7` or `.rolluo 3d5`
-`.nroll` | Rolls in a given range.  | `.nroll 5` (rolls 0-5) or `.nroll 5-15`
+`.nroll` | Rolls in a given range. If you specify just one number instead of the range, it will role from 0 to that number.  | `.nroll 5` or `.nroll 5-15`
 `.draw` | Draws a card from this server's deck. You can draw up to 10 cards by supplying a number of cards to draw.  | `.draw` or `.draw 5`
 `.drawnew` | Draws a card from the NEW deck of cards. You can draw up to 10 cards by supplying a number of cards to draw.  | `.drawnew` or `.drawnew 5`
 `.deckshuffle` `.dsh` | Reshuffles all cards back into the deck.  | `.dsh`
@@ -181,7 +189,7 @@ Commands and aliases | Description | Usage
 `.linux` | Prints a customizable Linux interjection  | `.linux Spyware Windows`
 `.leet` | Converts a text to leetspeak with 6 (1-6) severity levels  | `.leet 3 Hello`
 `.acrophobia` `.acro` | Starts an Acrophobia game. Second argument is optional round length in seconds. (default is 60)  | `.acro` or `.acro 30`
-`.cleverbot` | Toggles cleverbot session. When enabled, the bot will reply to messages starting with bot mention in the server. Custom reactions starting with %mention% won't work if cleverbot is enabled. **Gremagol Only cuz Ene is mine :P** | `.cleverbot`
+`.cleverbot` | Toggles cleverbot session. When enabled, the bot will reply to messages starting with bot mention in the server. Custom reactions starting with %mention% won't work if cleverbot is enabled. **Gremagol Only** | `.cleverbot`
 `.connect4` `.con4` | Creates or joins an existing connect4 game. 2 players are required for the game. Objective of the game is to get 4 of your pieces next to each other in a vertical, horizontal or diagonal line.  | `.connect4`
 `.hangmanlist` | Shows a list of hangman term types.  | `.hangmanlist`
 `.hangman` | Starts a game of hangman in the channel. Use `.hangmanlist` to see a list of available term types. Defaults to 'all'.  | `.hangman` or `.hangman movies`
@@ -214,7 +222,7 @@ Commands and aliases | Description | Usage
 `.hgit` | Generates the commandlist.md file. **Gremagol Only** | `.hgit`
 `.readme` `.guide` | Sends a readme and a guide links to the channel.  | `.readme` or `.guide`
 `.donate` | Instructions for helping the project financially.  | `.donate`
-`.invite` | Gives you some Invite Links for the Support server and the bot itself. | `.invite`
+`.invite` | Sends invite links to your current channel.  | `.invite`
 
 ###### [Back to ToC](#table-of-contents)
 
@@ -222,7 +230,7 @@ Commands and aliases | Description | Usage
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
 `.nowplaying` or `.np` | Shows the song that is currently playing | `.nowplaying`
-`.play` <title|URL|subcommand> | Plays the provided song | `.play Opus - Life is life`
+`.play` <title/URL/subcommand> | Plays the provided song | `.play Opus - Life is life`
 `.playlists` | Shows the available playlists | `.playlists`
 `.queue [pagenum]` | Shows the current queue | `.queue 3`
 `.remove <position|ALL>` | Removes a song from the queue | `.remove 14` `.remove all`
@@ -316,6 +324,8 @@ Commands and aliases | Description | Usage
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
 `.lolban` | Shows top banned champions ordered by ban rate.  | `.lolban`
+`.rip` | rip  | `rip`
+`.say` | Bot will send the message you typed in this channel. Supports embeds.  | `.say hi`
 `.weather` `.we` | Shows weather data for a specified city. You can also specify a country after a comma.  | `.we Moscow, RU`
 `.time` | Shows the current time and timezone in the specified location.  | `.time London, UK`
 `.youtube` `.yt` | Searches youtubes and shows the first result  | `.yt query`
@@ -332,7 +342,7 @@ Commands and aliases | Description | Usage
 `.yodify` `.yoda` | Translates your normal sentences into Yoda styled sentences!  | `.yoda my feelings hurt`
 `.urbandict` `.ud` | Searches Urban Dictionary for a word.  | `.ud Pineapple`
 `.define` `.def` | Finds a definition of a word.  | `.def heresy`
-`.#` | Searches Tagdef.com for a hashtag.  | `.# ff`
+`.aq` | Searches Tagdef.com for a hashtag.  | `.# ff`
 `.catfact` | Shows a random catfact from <http://catfacts-api.appspot.com/api/facts>  | `.catfact`
 `.revav` | Returns a Google reverse image search for someone's avatar.  | `.revav @SomeGuy`
 `.revimg` | Returns a Google reverse image search for an image from a link.  | `.revimg Image link`
@@ -387,11 +397,10 @@ Commands and aliases | Description | Usage
 `.userid` `.uid` | Shows user ID.  | `.uid` or `.uid @SomeGuy`
 `.channelid` `.cid` | Shows current channel ID.  | `.cid`
 `.serverid` `.sid` | Shows current server ID.  | `.sid`
-`.roles` | List roles on this server or a roles of a specific user if specified. Paginated, 20 roles per page.  | `.roles 2` or `.roles @Someone`
+`.roles` | List roles on this server or roles of a user if specified. Paginated, 20 roles per page.  | `.roles 2` or `.roles @Someone`
 `.channeltopic` `.ct` | Sends current channel's topic as a message.  | `.ct`
 `.createinvite` `.crinv` | Creates a new invite which has infinite max uses and never expires. **Requires CreateInstantInvite channel permission.** | `.crinv`
-`.shardstats` | Stats for shards. Paginated with 25 shards per page.  | `.shardstats` or `.shardstats 2`
-`.stats` | Shows some basic stats for Ene.  | `.stats`
+`.stats` `.info` | Shows some basic stats for Ene.  | `.stats`
 `.showemojis` `.se` | Shows a name and a link to every SPECIAL emoji in the message.  | `.se A message full of SPECIAL emojis`
 `.listservers` | Lists servers the bot is on with some basic info. 15 per page. **Gremagol Only** | `.listservers 3`
 `.savechat` | Saves a number of messages to a text file and sends it to you. **Gremagol Only** | `.savechat 150`
@@ -405,13 +414,12 @@ Commands and aliases | Description | Usage
 `.channelinfo` `.cinfo` | Shows info about the channel. If no channel is supplied, it defaults to current one.  | `.cinfo #some-channel`
 `.userinfo` `.uinfo` | Shows info about the user. If no user is supplied, it defaults a user running the command.  | `.uinfo @SomeUser`
 `.activity` | Checks for spammers. **Gremagol Only** | `.activity`
-`.parewrel` | Forces the update of the list of patrons who are eligible for the reward. **Gremagol Only** | `.parewrel`
+`.parewrel` | Forces the update of the list of patrons who are eligible for the reward.  | `.parewrel`
 `.clparew` | Claim patreon rewards. If you're subscribed to bot owner's patreon you can use this command to claim your rewards - assuming bot owner did setup has their patreon key.  | `.clparew`
 `.listquotes` `.liqu` | Lists all quotes on the server ordered alphabetically. 15 Per page.  | `.liqu` or `.liqu 3`
-`...` | Shows a random quote with a specified name.  | `... abc`
+`..` | Shows a random quote with a specified name.  | `.. abc`
 `.qsearch` | Shows a random quote for a keyword that contains any text specified in the search.  | `.qsearch keyword text`
 `.quoteid` `.qid` | Displays the quote with the specified ID number. Quote ID numbers can be found by typing `.liqu [num]` where `[num]` is a number of a page which contains 15 quotes.  | `.qid 123456`
-`..` | Adds a new quote with the specified name and message.  | `.. sayhi Hi`
 `.quotedel` `.qdel` | Deletes a quote with the specified ID. You have to be either server Administrator or the creator of the quote to delete it.  | `.qdel 123456`
 `.delallq` `.daq` | Deletes all quotes on a specified keyword. **Requires Administrator server permission.** | `.delallq kek`
 `.remind` | Sends a message to you or a channel after certain amount of time. First argument is `me`/`here`/'channelname'. Second argument is time in a descending order (mo>w>d>h>m) example: 1w5d3h10m. Third argument is a (multiword) message.  | `.remind me 1d5h Do something` or `.remind #general 1m Start now!`
@@ -443,7 +451,7 @@ Commands and aliases | Description | Usage
 `.xpgleaderboard` `.xpglb` | Shows the global xp leaderboard.  | `.xpglb`
 `.xpadd` | Adds xp to a user on the server. This does not affect their global ranking. You can use negative values. **Requires Administrator server permission.** | `.xpadd 100 @b1nzy`
 `.clubadmin` | Assigns (or unassigns) staff role to the member of the club. Admins can ban, kick and accept applications.  | `.clubadmin`
-`.clubcreate` | Creates a club. You must be atleast level 5 and not be in the club already.  | `.clubcreate b1nzy's friends`
+`.clubcreate` | Creates a club. You must be at least level 5 and not be in the club already.  | `.clubcreate b1nzy's friends`
 `.clubicon` | Sets the club icon.  | `.clubicon https://i.imgur.com/htfDMfU.png`
 `.clubinfo` | Shows information about the club.  | `.clubinfo b1nzy's friends#123`
 `.clubbans` | Shows the list of users who have banned from your club. Paginated. You must be club owner to use this command.  | `.clubbans 2`
