@@ -7,5 +7,9 @@ pages:
     - Custom Reactions: Custom Reactions.md
     - Permission Guide: Permissions System.md
     - Placeholders: Placeholders.md
+- Music Guide:
+    - Player: Player.md
+    - Permissions: Permissions.md
+    - Playlists: Playlists.md
 
 theme: readthedocs

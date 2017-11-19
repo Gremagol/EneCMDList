@@ -229,23 +229,29 @@ Commands and aliases | Description | Usage
 ### Music  
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
-`.nowplaying` or `.np` | Shows the song that is currently playing | `.nowplaying`
-`.play` <title|URL|subcommand> | Plays the provided song | `.play Opus - Life is life`
-`.playlists` | Shows the available playlists | `.playlists`
-`.queue [pagenum]` | Shows the current queue | `.queue 3`
-`.remove <position|ALL>` | Removes a song from the queue | `.remove 14` `.remove all`
-`.search <query>` | Searches Youtube for a provided query. Shows up to 4 possible Songs | `.search Life is life`
-`.scsearch <query>` | Searches Soundcloud for a provided query | `.scsearch Zedd`
-`.shuffle` | Shuffles songs you have added | `.shuffle`
-`.skip` | Votes to skip the current song | `.skip`
-`.forceskip` | Skips the current song | `.forceskip`
-`.pause` | Pauses the current song | `.pause`
-`.skipto <position>` | Skips to the specified song | `.skipto 5`
-`.stop` | Stops the current song and clears the queue | `.stop`
-`.volume [0-150]` | Sets or shows volume | `.volume 50`
-`.setdj <rolename|NONE>` | Sets the DJ role for certain music commands | `.setdj everyone`
-`.settc <channel|NONE>` | Sets the text channel for music commands | `.settc #music`
-`.setvc <channel|NONE>` | Sets the voice channel for playing music | `.setvc Ene-Music`
+`.play <url>` or `.play <search-term>` | Play music from the given URL or search for a track. | `.p` `.play`
+`.list` | Display a list of the current songs in the playlist. | `.l` `.list`
+`.nowplaying` | Display the currently playing song. | `.np` `nowplaying`
+`.skip OR .skip n OR .skip n-m OR .skip @Users...` | Skip the current song, the nth song in the queue, all songs from n to m, or all songs from mentioned users. Please use in moderation. | `.s` `.skip`
+`.stop` | Stop the player and clear the playlist. | `.stop`
+`.pause` | Pause the player. | `.pause`
+`.unpause` | Unpause the player. | `.unpause`
+`.join` | Makes Ene join your current voice channel. | `.join`
+`.disconnect` | Make Ene leave the current voice channel. | `.disconnect` `.lv`
+`.repeat single|all|off` | Toggle between repeat modes. | `.repeat`
+`.shuffle` | Toggle shuffle mode for the current queue. | `.shuffle`
+`.reshuffle` | Reshuffle the current queue. | `reshuffle`
+`.forward [[hh:]mm:]ss` | Forward the track by a given amount of time. | `.forward 2:30`
+`.rewind [[hh:]mm:]ss` | Rewind the track by a given amount of time. | `.rewind 30`
+`.seek [[hh:]mm:]ss` | Set the position of the track to the given time. | `.seek 2:45:00`
+`.restart` | Restart the currently playing track. | `.restart`
+`.export` | Export the current queue to a hastebin link, can be later used as a playlist. | `.export`
+`.split <url>` | Split a YouTube video into a tracklist provided in its description. | `.split <url>`
+`.select n OR .play n` | Select one of the offered tracks after a search to play. | `.select n` `.play n`
+`.gensokyo` | Show the current song played on gensokyoradio.net | `.gensokyo`
+`.volume <0-150>` | Changes the volume. Values are 0-150 and 100 is the default. | `.volume`
+`.history` | Display a list of the songs in playlist history. | `.h``.history`
+`.destroy` | Reset the player and clear the playlist. | `.d` `.destory`
 
 ###### [Back to ToC](#table-of-contents)
 
