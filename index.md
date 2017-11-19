@@ -11,12 +11,12 @@ This is the Ene-Bot. She's basically a clone of the NadekoBot.
 ```
 >Some Helpfull stuff:
 - [Commands List](http://enecmdlist.readthedocs.io/en/latest/Commands%20List/)  
-- [Custom Reactions](http://enecmdlist.readthedocs.io/en/latest/Custom%20Reactions/)
-- [General Permissions](http://enecmdlist.readthedocs.io/en/latest/Permissions%20System/)
-- [Placeholders](http://enecmdlist.readthedocs.io/en/latest/Placeholders/)
-- [Music Player](http://enecmdlist.readthedocs.io/en/latest/Player)
-- [Music Playlists](http://enecmdlist.readthedocs.io/en/latest/Playlists)
-- [Music Permissions](http://enecmdlist.readthedocs.io/en/latest/Permissions/)
+- [Custom Reactions](http://enecmdlist.readthedocs.io/en/latest/Custom%20Reactions/)  
+- [General Permissions](http://enecmdlist.readthedocs.io/en/latest/Permissions%20System/)  
+- [Placeholders](http://enecmdlist.readthedocs.io/en/latest/Placeholders/)  
+- [Music Player](http://enecmdlist.readthedocs.io/en/latest/Player)  
+- [Music Permissions](http://enecmdlist.readthedocs.io/en/latest/Permissions/)   
+- [Music Playlists](http://enecmdlist.readthedocs.io/en/latest/Playlists)    
 
 Thanks to [Kwoth](https://github.com/Kwoth/NadekoBot) for making this awesome bot!
 
