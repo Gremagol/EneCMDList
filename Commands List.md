@@ -250,7 +250,7 @@ Commands and aliases | Description | Usage
 `.select n OR .play n` | Select one of the offered tracks after a search to play. | `.select n` `.play n`
 `.gensokyo` | Show the current song played on gensokyoradio.net | `.gensokyo`
 `.volume <0-150>` | Changes the volume. Values are 0-150 and 100 is the default. | `.volume`
-`.history` | Display a list of the songs in playlist history. | `.h``.history`
+`.history` | Display a list of the songs in playlist history. | `.h` `.history`
 `.destroy` | Reset the player and clear the playlist. | `.d` `.destory`
 
 ###### [Back to ToC](#table-of-contents)
