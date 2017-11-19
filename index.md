@@ -9,7 +9,7 @@ This is the Ene-Bot. She's basically a clone of the NadekoBot.
  Multiple utility commands
  ===And much more===
 ```
->Some Helpfull stuff:
+>Some Helpfull stuff: 
 - [Commands List](http://enecmdlist.readthedocs.io/en/latest/Commands%20List/)  
 - [Custom Reactions](http://enecmdlist.readthedocs.io/en/latest/Custom%20Reactions/)  
 - [General Permissions](http://enecmdlist.readthedocs.io/en/latest/Permissions%20System/)  
