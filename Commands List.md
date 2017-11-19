@@ -229,6 +229,7 @@ Commands and aliases | Description | Usage
 ### Music  
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
+`.config` | Gives you various options like announce the song that's currently playing in the selected channel. | `.config topic_channel = music` `.config auto_resume = true`
 `.play <url>` or `.play <search-term>` | Play music from the given URL or search for a track. | `.p` `.play`
 `.list` | Display a list of the current songs in the playlist. | `.l` `.list`
 `.nowplaying` | Display the currently playing song. | `.np` `nowplaying`
@@ -238,7 +239,7 @@ Commands and aliases | Description | Usage
 `.unpause` | Unpause the player. | `.unpause`
 `.join` | Makes Ene join your current voice channel. | `.join`
 `.disconnect` | Make Ene leave the current voice channel. | `.disconnect` `.lv`
-`.repeat single|all|off` | Toggle between repeat modes. | `.repeat`
+`.songrepeat single|all|off` | Toggle between repeat modes. | `.srp`
 `.shuffle` | Toggle shuffle mode for the current queue. | `.shuffle`
 `.reshuffle` | Reshuffle the current queue. | `reshuffle`
 `.forward [[hh:]mm:]ss` | Forward the track by a given amount of time. | `.forward 2:30`
