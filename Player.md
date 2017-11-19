@@ -17,9 +17,10 @@ If you want to skip you can use `.skip`, and to stop the quene you can do `.stop
 
 ### Music sounds laggy
 It's possible that the music your playing doesn't sound as perfect as your normally used to. This can happen to alot of factors like:
-* Your connection to the Discord Server is to far.
-* Discord is having a decrease in network performance.
-* The bot might have a small hiccup (temporarly).
+
+- Your connection to the Discord Server is to far.
+- Discord is having a decrease in network performance.
+- The bot might have a small hiccup (temporarly).
 
 If you experience some lag or issue's with the music module you can issue `.distory` to completely reset the music player. Give it a minute or two and then try again.
 
