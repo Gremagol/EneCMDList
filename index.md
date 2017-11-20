@@ -10,12 +10,12 @@ This is the Ene-Bot. She's basically a clone of the NadekoBot.
  ===And much more===
 ```
 Some Helpfull stuff:  
-**=====** General Guides **=====**
+**=====** General Guides **=====**   
 - [Commands List](http://enecmdlist.readthedocs.io/en/latest/Commands%20List/)  
 - [Custom Reactions](http://enecmdlist.readthedocs.io/en/latest/Custom%20Reactions/)  
 - [General Permissions](http://enecmdlist.readthedocs.io/en/latest/Permissions%20System/)  
 - [Placeholders](http://enecmdlist.readthedocs.io/en/latest/Placeholders/)  
-**======** Music Guides **=====**
+**======** Music Guides **=====**   
 - [Music Player](http://enecmdlist.readthedocs.io/en/latest/Player)  
 - [Music Permissions](http://enecmdlist.readthedocs.io/en/latest/Permissions/)   
 - [Music Playlists](http://enecmdlist.readthedocs.io/en/latest/Playlists)    
