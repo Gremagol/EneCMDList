@@ -10,10 +10,12 @@ This is the Ene-Bot. She's basically a clone of the NadekoBot.
  ===And much more===
 ```
 Some Helpfull stuff:  
+**=====** General Guides **=====**
 - [Commands List](http://enecmdlist.readthedocs.io/en/latest/Commands%20List/)  
 - [Custom Reactions](http://enecmdlist.readthedocs.io/en/latest/Custom%20Reactions/)  
 - [General Permissions](http://enecmdlist.readthedocs.io/en/latest/Permissions%20System/)  
 - [Placeholders](http://enecmdlist.readthedocs.io/en/latest/Placeholders/)  
+**======** Music Guides **=====**
 - [Music Player](http://enecmdlist.readthedocs.io/en/latest/Player)  
 - [Music Permissions](http://enecmdlist.readthedocs.io/en/latest/Permissions/)   
 - [Music Playlists](http://enecmdlist.readthedocs.io/en/latest/Playlists)    
@@ -21,15 +23,10 @@ Some Helpfull stuff:
 Thanks to [Kwoth](https://github.com/Kwoth/NadekoBot) for making this awesome bot!
 
 ###Invite Links:	
-**Notice:** These QR-Codes can be scanned with a phone.
-
-So, if you want to invite her, click on the image.
-
+[![img][img3]](https://gremagol.com/ene)
 [![img][img2]](https://gremagol.com/inv-ene)
-
-If you have any questions, join Ene's cave by clicking the image.
-
 [![img][img1]](https://gremagol.com/discord)
 
-[img1]: http://i.imgur.com/ULim9Ph.png
-[img2]: http://i.imgur.com/v6PFheO.png
+[img1]: https://i.imgur.com/1XfvrNL.png
+[img2]: https://i.imgur.com/opqiNVO.png
+[img3]: https://i.imgur.com/fFdUmKD.png
