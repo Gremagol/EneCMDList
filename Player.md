@@ -34,6 +34,8 @@ Auto_resume is an option that resume’s playing the song when a user joins the 
 
 Topic_channel is almost the same as track_announce but displays what’s being played in the topic that the option is configured too.
 
+**Note:** If you dont want Ene to change the topic anymore, take away her Permission to manage the Channel. This way, the topic won't get updated anymore.
+
 ## How do I configure these options?
 
 Type in `.config track_announce = true` to set it to true, replace true with false to disable the functionality. Auto_resume works the exact same way.
