@@ -230,6 +230,7 @@ Commands and aliases | Description | Usage
 Commands and aliases | Description | Usage
 ----------------|--------------|-------
 `.config` | Gives you various options like announce the song that's currently playing in the selected channel. | `.config topic_channel = music` `.config auto_resume = true`
+`.mprefix` | Set a Prefix of the Musicmodule for your Server. **Note:** If you forgot the prefix, you can do `@Ene mprefix` | `.mprefix +` `+smp .`
 `.play <url>` or `.play <search-term>` | Play music from the given URL or search for a track. | `.p` `.play`
 `.list` | Display a list of the current songs in the playlist. | `.l` `.list`
 `.nowplaying` | Display the currently playing song. | `.np` `nowplaying`
