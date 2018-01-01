@@ -4,6 +4,7 @@
 - [CustomReactions](#customreactions)
 - [Gambling](#gambling)
 - [Games](#games)
+- [Music](#music)
 - [NSFW](#nsfw)
 - [Permissions](#permissions)
 - [Pokemon](#pokemon)
@@ -249,7 +250,7 @@ Commands and aliases | Description | Usage
 `.list` | Display a list of the current songs in the playlist. | `.l` `.list`
 `.nowplaying` | Display the currently playing song. | `.np` `nowplaying`
 `.skip OR .skip n OR .skip n-m OR .skip @Users...` | Skip the current song, the nth song in the queue, all songs from n to m, or all songs from mentioned users. Please use in moderation. | `.s` `.skip`
-`.stop` | Stop the player and clear the playlist. | `.stop`
+`.stop` | Stop the player and clear the playlist. \(Ene will stay in your channel\) | `.stop`
 `.pause` | Pause the player. | `.pause`
 `.unpause` | Unpause the player. | `.unpause`
 `.join` | Makes Ene join your current voice channel. | `.join`
@@ -267,7 +268,7 @@ Commands and aliases | Description | Usage
 `.gensokyo` | Show the current song played on gensokyoradio.net | `.gensokyo`
 `.volume <0-150>` | Changes the volume. Values are 0-150 and 100 is the default. | `.volume`
 `.history` | Display a list of the songs in playlist history. | `.h` `.history`
-`.destroy` | Reset the player and clear the playlist. | `.d` `.destory`
+`.destroy` | Reset the player and clear the playlist. \(Ene Will leave your Channel\) | `.d` `.destory`
 
 ###### [Back to ToC](#table-of-contents)
 
