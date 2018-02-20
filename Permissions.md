@@ -1,5 +1,5 @@
 ###Permissions (Music)
-When developing the permission system it was decided we wanted a simple permission system that could easily be configured. FredBoat uses 4 different ranks each with different permissions.
+When developing the permission system it was decided, that the FredBoat Dev's wanted a simple permission system that could easily be configured. Ene uses 4 different ranks each with different permissions.
 
 Ranks | Description
 ------------- | -------------
