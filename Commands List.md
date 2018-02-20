@@ -27,6 +27,7 @@ Commands and aliases | Description | Usage
 `.setchanlname` `.schn` | Changes the name of the current channel. **Requires ManageChannels server permission.** | `.schn NewName`
 `.donators` | List of the lovely people who donated to keep this project alive.  | `.donators`
 `.donadd` | Add a donator to the database. **Bot owner only** | `.donadd Donate Amount`
+`.edit` | Edits bot's message, you have to specify message ID and new text. Supports embeds. **Requires ManageMessages server permission.** | `.edit 7479498384 Hi :^)`
 `.autoassignrole` `.aar` | Automaticaly assigns a specified role to every user who joins the server. Provide no arguments to disable. **Requires ManageRoles server permission.** | `.aar` or `.aar RoleName`
 `.execsql` | Executes an sql command and returns the number of affected rows. Dangerous. **Bot owner only** | `.execsql UPDATE Currency SET Amount=Amount+1234`
 `.deletewaifus` | Deletes everything from WaifuUpdates and WaifuInfo tables. **Bot owner only** | `.deletewaifus`
@@ -49,10 +50,10 @@ Commands and aliases | Description | Usage
 `.voicemute` | Prevents a mentioned user from speaking in voice channels. **Requires MuteMembers server permission.** | `.voicemute @Someone`
 `.voiceunmute` | Gives a previously voice-muted user a permission to speak. **Requires MuteMembers server permission.** | `.voiceunmute @Someguy`
 `.rotateplaying` `.ropl` | Toggles rotation of playing status of the dynamic strings you previously specified. **Bot owner only** | `.ropl`
-`.addplaying` `.adpl` | Adds a specified string to the list of playing strings to rotate. You have to pick either 'Playing', 'Watching' or 'ListeningTo' as the first parameter. Supported placeholders: `%servers%`, `%users%`, `%playing%`, `%queued%`, `%time%`, `%shardid%`, `%shardcount%`, `%shardguilds%`. **Bot owner only** | `.adpl Playing with you` or `.adpl Watching you sleep`
+`.addplaying` `.adpl` | Adds a specified string to the list of playing strings to rotate. You have to pick either 'Playing', 'Watching' or 'Listening' as the first parameter. Supported placeholders: `%servers%`, `%users%`, `%playing%`, `%queued%`, `%time%`, `%shardid%`, `%shardcount%`, `%shardguilds%`. **Bot owner only** | `.adpl Playing with you` or `.adpl Watching you sleep`
 `.listplaying` `.lipl` | Lists all playing statuses with their corresponding number. **Bot owner only** | `.lipl`
 `.removeplaying` `.rmpl` `.repl` | Removes a playing string on a given number. **Bot owner only** | `.rmpl`
-`.prefix` | Sets this server's prefix for all bot commands. Provide no arguments to see the current server prefix.  | `.prefix +`
+`.prefix` | Sets this server's prefix for all bot commands. Provide no arguments to see the current server prefix. **Setting prefix requires Administrator server permission.**  | `.prefix +`
 `.defprefix` | Sets bot's default prefix for all bot commands. Provide no arguments to see the current default prefix. This will not change this server's current prefix. **Bot owner only** | `.defprefix +`
 `.antiraid` | Sets an anti-raid protection on the server. First argument is number of people which will trigger the protection. Second one is a time interval in which that number of people needs to join in order to trigger the protection, and third argument is punishment for those people (Kick, Ban, Mute) **Requires Administrator server permission.** | `.antiraid 5 20 Kick`
 `.antispam` | Stops people from repeating same message X times in a row. You can specify to either mute, kick or ban the offenders. If you're using mute, you can add a number of seconds at the end to use a timed mute. Max message count is 10. **Requires Administrator server permission.** | `.antispam 3 Mute` or `.antispam 4 Kick` or `.antispam 6 Ban`
@@ -71,11 +72,11 @@ Commands and aliases | Description | Usage
 `.createrole` `.cr` | Creates a role with a given name. **Requires ManageRoles server permission.** | `.cr Awesome Role`
 `.rolehoist` `.rh` | Toggles whether this role is displayed in the sidebar or not. **Requires ManageRoles server permission.** | `.rh Guests` or `.rh "Space Wizards"`
 `.rolecolor` `.roleclr` | Set a role's color to the hex or 0-255 rgb color value provided. **Requires ManageRoles server permission.** | `.roleclr Admin 255 200 100` or `.roleclr Admin ffba55`
-`.mentionrole` `.menro` | Mentions every person from the provided role or roles (separated by a ',') on this server. **Requires MentionEveryone server permission.** | `.menro RoleName`
+`.mentionrole` `.menro` | Mentions a role. If the role is not mentionable, bot will make it mentionable for a moment. **Requires MentionEveryone server permission.** | `.menro RoleName`
 `.adsarm` | Toggles the automatic deletion of confirmations for `.iam` and `.iamn` commands. **Requires ManageMessages server permission.** | `.adsarm`
 `.asar` | Adds a role to the list of self-assignable roles. You can also specify a group. If 'Exclusive self-assignable roles' feature is enabled, users will be able to pick one role per group. **Requires ManageRoles server permission.** | `.asar Gamer` or `.asar 1 Alliance` or `.asar 1 Horde`
 `.rsar` | Removes a specified role from the list of self-assignable roles. **Requires ManageRoles server permission.** | `.rsar`
-`.lsar` | Lists all self-assignable roles.  | `.lsar`
+`.lsar` | Lists self-assignable roles. Shows 20 roles per page.  | `.lsar` or `.lsar 2`
 `.togglexclsar` `.tesar` | Toggles whether the self-assigned roles are exclusive. While enabled, users can only have one self-assignable role per group. **Requires ManageRoles server permission.** | `.tesar`
 `.rolelevelreq` `.rlr` | Set a level requirement on a self-assignable role. **Requires ManageRoles server permission.** | `.rlr 5 SomeRole`
 `.iam` | Adds a role to you that you choose. Role must be on a list of self-assignable roles.  | `.iam Gamer`
@@ -95,8 +96,8 @@ Commands and aliases | Description | Usage
 `.setname` `.newnm` | Gives the bot a new name. **Bot owner only** | `.newnm BotName`
 `.setnick` | Changes the nickname of the bot on this server. You can also target other users to change their nickname. **Requires ManageNicknames server permission.** | `.setnick BotNickname` or `.setnick @SomeUser New Nickname`
 `.setstatus` | Sets the bot's status. (Online/Idle/Dnd/Invisible) **Bot owner only** | `.setstatus Idle`
-`.setavatar` `.setav` | Sets a new avatar image for the NadekoBot. Argument is a direct link to an image. **Bot owner only** | `.setav http://i.imgur.com/xTG3a1I.jpg`
-`.game` | Sets the bots game status to either Playing, ListeningTo, or Watching. **Bot owner only** | `.setgame Playing with snakes.` or `.setgame Watching anime.` or `.setgame ListeningTo music.`
+`.setavatar` `.setav` | Sets a new avatar image for the EneBot. Argument is a direct link to an image. **Bot owner only** | `.setav http://i.imgur.com/xTG3a1I.jpg`
+`.game` | Sets the bots game status to either Playing, Listening, or Watching. **Bot owner only** | `.setgame Playing with snakes.` or `.setgame Watching anime.` or `.setgame Listening music.`
 `.setstream` | Sets the bots stream. First argument is the twitch link, second argument is stream name. **Bot owner only** | `.setstream TWITCHLINK Hello`
 `.send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`. **Bot owner only** | `.send serverid|c:channelid message` or `.send serverid|u:userid message`
 `.imagesreload` | Reloads images bot is using. Safe to use even when bot is being used heavily. **Bot owner only** | `.imagesreload`
@@ -114,7 +115,7 @@ Commands and aliases | Description | Usage
 `.warn` | Warns a user. **Requires BanMembers server permission.** | `.warn @b1nzy Very rude person`
 `.warnlog` | See a list of warnings of a certain user. **Requires BanMembers server permission.** | `.warnlog @b1nzy`
 `.warnlogall` | See a list of all warnings on the server. 15 users per page. **Requires BanMembers server permission.** | `.warnlogall` or `.warnlogall 2`
-`.warnclear` `.warnc` | Clears all warnings from a certain user. **Requires BanMembers server permission.** | `.warnclear @PoorDude`
+`.warnclear` `.warnc` | Clears all warnings from a certain user. You can specify a number to clear a specific one. **Requires BanMembers server permission.** | `.warnclear @PoorDude 3` or `.warnclear @PoorDude`
 `.warnpunish` `.warnp` | Sets a punishment for a certain number of warnings. Provide no punishment to remove. **Requires BanMembers server permission.** | `.warnpunish 5 Ban` or `.warnpunish 3`
 `.warnpunishlist` `.warnpl` | Lists punishments for warnings.  | `.warnpunishlist`
 `.ban` `.b` | Bans a user by ID or name with an optional message. **Requires BanMembers server permission.** | `.b "@some Guy" Your behaviour is toxic.`
@@ -162,9 +163,14 @@ Commands and aliases | Description | Usage
 `.rollduel` | Challenge someone to a roll duel by specifying the amount and the user you wish to challenge as the parameters. To accept the challenge, just specify the name of the user who challenged you, without the amount.  | `.rollduel 50 @SomeGuy` or `.rollduel @Challenger`
 `.betroll` `.br` | Bets a certain amount of currency and rolls a dice. Rolling over 66 yields x2 of your currency, over 90 - x4 and 100 x10.  | `.br 5`
 `.leaderboard` `.lb` | Displays the bot's currency leaderboard.  | `.lb`
+`.rps` | Play a game of Rocket-Paperclip-Scissors with Ene. You can bet on it. Multiplier is the same as on betflip.  | `.rps r 100` or `.rps scissors`
 `.race` | Starts a new animal race.  | `.race`
 `.joinrace` `.jr` | Joins a new race. You can specify an amount of currency for betting (optional). You will get YourBet*(participants-1) back if you win.  | `.jr` or `.jr 5`
-`.event` | Starts one of the events seen on public Ene. `reaction` and `sneakygamestatus` are the only 2 available now. **Bot owner only** | `.startevent reaction`
+`.blackjack` `.bj` | Start or join a blackjack game. You must specify the amount you're betting. Use `.hit`, `.stand` and `.double` commands to play. Game is played with 4 decks. Dealer hits on soft 17 and wins draws.  | `.bj 50`
+`.hit` | In the blackjack game, ask the dealer for an extra card.  | `.hit`
+`.stand` | Finish your turn in the blackjack game.  | `.stand`
+`.double` | In the blackjack game, double your bet in order to receive exactly one more card, and your turn ends.  | `.double`
+`.event` | Starts one of the events seen on public Ene. Events: `reaction` **Bot owner only** | `.eventstart reaction` or `.eventstart reaction -d 1 -a 50 --pot-size 1500`
 `.rafflecur` | Starts or joins a currency raffle with a specified amount. Users who join the raffle will lose the amount of currency specified and add it to the pot. After 30 seconds, random winner will be selected who will receive the whole pot. There is also a `mixed` mode in which the users will be able to join the game with any amount of currency, and have their chances be proportional to the amount they've bet.  | `.rafflecur 20` or `.rafflecur mixed 15`
 `.roll` | Rolls 0-100. If you supply a number `X` it rolls up to 30 normal dice. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`. `Y` can be a letter 'F' if you want to roll fate dice instead of dnd.  | `.roll` or `.roll 7` or `.roll 3d5` or `.roll 5dF`
 `.rolluo` | Rolls `X` normal dice (up to 30) unordered. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`.  | `.rolluo` or `.rolluo 7` or `.rolluo 3d5`
@@ -199,17 +205,16 @@ Commands and aliases | Description | Usage
 ----------------|--------------|-------
 `.choose` | Chooses a thing from a list of things  | `.choose Get up;Sleep;Sleep more`
 `.8ball` | Ask the 8ball a yes/no question.  | `.8ball Is b1nzy a nice guy?`
-`.rps` | Play a game of Rocket-Paperclip-Scissors with Ene.  | `.rps scissors`
 `.rategirl` | Use the universal hot-crazy wife zone matrix to determine the girl's worth. It is everything young men need to know about women. At any moment in time, any woman you have previously located on this chart can vanish from that location and appear anywhere else on the chart.  | `.rategirl @SomeGurl`
 `.linux` | Prints a customizable Linux interjection  | `.linux Spyware Windows`
-`.leet` | Converts a text to leetspeak with 6 (1-6) severity levels  | `.leet 3 Hello`
 `.acrophobia` `.acro` | Starts an Acrophobia game.  | `.acro` or `.acro -s 30`
 `.cleverbot` | Toggles cleverbot session. When enabled, the bot will reply to messages starting with bot mention in the server. Custom reactions starting with %mention% won't work if cleverbot is enabled. **Bot owner only** | `.cleverbot`
 `.connect4` `.con4` | Creates or joins an existing connect4 game. 2 players are required for the game. Objective of the game is to get 4 of your pieces next to each other in a vertical, horizontal or diagonal line.  | `.connect4`
 `.hangmanlist` | Shows a list of hangman term types.  | `.hangmanlist`
 `.hangman` | Starts a game of hangman in the channel. Use `.hangmanlist` to see a list of available term types. Defaults to 'all'.  | `.hangman` or `.hangman movies`
 `.hangmanstop` | Stops the active hangman game on this channel if it exists.  | `.hangmanstop`
-`.nunchi` | Creates or joins an existing nunchi game. Users have to count up by 1 from the starting number shown by the bot. If someone makes a mistake (types an incorrent number, or repeats the same number) they are out of the game and a new round starts without them.  Minimum 3 users required.  | `.nunchi`
+`.leet` | Converts a text to leetspeak with 6 (1-6) severity levels  | `.leet 3 Hello`
+`.nunchi` | Creates or joins an existing nunchi game. Users have to count up by 1 from the starting number shown by the bot. If someone makes a mistake (types an incorrect number, or repeats the same number) they are out of the game and a new round starts without them.  Minimum 3 users required.  | `.nunchi`
 `.pick` | Picks the currency planted in this channel. 60 seconds cooldown.  | `.pick`
 `.plant` | Spend an amount of currency to plant it in this channel. Default is 1. (If bot is restarted or crashes, the currency will be lost)  | `.plant` or `.plant 5`
 `.gencurrency` `.gc` | Toggles currency generation on this channel. Every posted message will have chance to spawn currency. Chance is specified by the Bot Owner. (default is 2%) **Requires ManageMessages server permission.** | `.gc`
@@ -372,10 +377,11 @@ Commands and aliases | Description | Usage
 `.revimg` | Returns a Google reverse image search for an image from a link.  | `.revimg Image link`
 `.safebooru` | Shows a random image from safebooru with a given tag. Tag is optional but preferred. (multiple tags are appended with +)  | `.safebooru yuri+kissing`
 `.wikipedia` `.wiki` | Gives you back a wikipedia link  | `.wiki query`
-`.color` | Shows you what color corresponds to that hex.  | `.color 00ff00`
+`.color` `.clr` | Shows you which colors correspond to the inputed hexes.  | `.color 00ff00` or `.color f00 0f0 00f`
 `.videocall` | Creates a private <http://www.appear.in> video call link for you and other mentioned people. The link is sent to mentioned people via a private message.  | `.videocall "@the First" "@Xyz"`
 `.avatar` `.av` | Shows a mentioned person's avatar.  | `.av @SomeGuy`
 `.wikia` | Gives you back a wikia link  | `.wikia mtg Vigilance` or `.wikia mlp Dashy`
+`.bible` | Shows bible verse. You need to supply book name and chapter:verse  | `.bible genesis 3:19`
 `.novel` | Searches for a novel on `http://novelupdates.com/`. You have to provide an exact name.  | `.novel the nine cauldrons`
 `.mal` | Shows basic info from a MyAnimeList profile.  | `.mal straysocks`
 `.anime` `.ani` `.aq` | Queries anilist for an anime and shows the first result.  | `.ani aquarion evol`
@@ -406,8 +412,9 @@ Commands and aliases | Description | Usage
 `.twitch` `.tw` | Notifies this channel when the specified user starts streaming. **Requires ManageMessages server permission.** | `.twitch SomeStreamer`
 `.picarto` `.pa` | Notifies this channel when the specified user starts streaming. **Requires ManageMessages server permission.** | `.picarto SomeStreamer`
 `.mixer` `.bm` | Notifies this channel when the specified user starts streaming. **Requires ManageMessages server permission.** | `.mixer SomeStreamer`
+`.streamadd` `.stadd` | Notifies this channel when the user's stream on the specified URL goes online or offline. **Requires ManageMessages server permission.** | `.stadd twitch.tv/someguy`
+`.streamremove` `.strm` | Removes notifications of a specified stream on the specified platform on this channel. You can also just specify an url. **Requires ManageMessages server permission.** | `.strm Twitch SomeGuy` or `.strm twitch.tv/someguy`
 `.liststreams` `.ls` | Lists all streams you are following on this server.  | `.ls`
-`.removestream` `.rms` | Removes notifications of a certain streamer from a certain platform on this channel. **Requires ManageMessages server permission.** | `.rms Twitch SomeGuy` or `.rms mixer SomeOtherGuy`
 `.checkstream` `.cs` | Checks if a user is online on a certain streaming platform.  | `.cs twitch MyFavStreamer`
 `.translate` `.trans` | Translates from>to text. From the given language to the destination language.  | `.trans en>fr Hello`
 `.autotrans` `.at` | Starts automatic translation of all messages by users who set their `.atl` in this channel. You can set "del" argument to automatically delete all translated user messages. **Requires Administrator server permission.** **Bot owner only** | `.at` or `.at del`
@@ -425,6 +432,7 @@ Commands and aliases | Description | Usage
 `.inrole` | Lists every person from the specified role on this server. You can use role ID, role name.  | `.inrole Some Role`
 `.checkperms` | Checks yours or bot's user-specific permissions on this channel.  | `.checkperms me` or `.checkperms bot`
 `.userid` `.uid` | Shows user ID.  | `.uid` or `.uid @SomeGuy`
+`.roleid` `.rid` | Shows the id of the specified role.  | `.rid Some Role`
 `.channelid` `.cid` | Shows current channel ID.  | `.cid`
 `.serverid` `.sid` | Shows current server ID.  | `.sid`
 `.roles` | List roles on this server or roles of a user if specified. Paginated, 20 roles per page.  | `.roles 2` or `.roles @Someone`
@@ -438,7 +446,7 @@ Commands and aliases | Description | Usage
 `.botconfigedit` `.bce` | Sets one of available bot config settings to a specified value. Use the command without any parameters to get a list of available settings. **Bot owner only** | `.bce CurrencyName b1nzy` or `.bce`
 `.calculate` `.calc` | Evaluate a mathematical expression.  | `.calc 1+1`
 `.calcops` | Shows all available operations in the `.calc` command  | `.calcops`
-`.alias` `.cmdmap` | Create a custom alias for a certain Ene command. Provide no alias to remove the existing one. **Requires Administrator server permission.** | `.alias allin $bf 100 h` or `.alias "linux thingy" >loonix Spyware Windows`
+`.alias` `.cmdmap` | Create a custom alias for a certain Ene command. Provide no alias to remove the existing one. **Requires Administrator server permission.** | `.alias allin .bf all h` or `.alias "linux thingy" >loonix Spyware Windows`
 `.aliaslist` `.cmdmaplist` `.aliases` | Shows the list of currently set aliases. Paginated.  | `.aliaslist` or `.aliaslist 3`
 `.serverinfo` `.sinfo` | Shows info about the server the bot is on. If no server is supplied, it defaults to current one.  | `.sinfo Some Server`
 `.channelinfo` `.cinfo` | Shows info about the channel. If no channel is supplied, it defaults to current one.  | `.cinfo #some-channel`
@@ -453,6 +461,8 @@ Commands and aliases | Description | Usage
 `.quotedel` `.qdel` | Deletes a quote with the specified ID. You have to be either server Administrator or the creator of the quote to delete it.  | `.qdel 123456`
 `.delallq` `.daq` | Deletes all quotes on a specified keyword. **Requires Administrator server permission.** | `.delallq kek`
 `.remind` | Sends a message to you or a channel after certain amount of time. First argument is `me`/`here`/'channelname'. Second argument is time in a descending order (mo>w>d>h>m) example: 1w5d3h10m. Third argument is a (multiword) message.  | `.remind me 1d5h Do something` or `.remind #general 1m Start now!`
+`.remindlist` `.remindl` `.remindlst` | Lists all reminders you created. Paginated.  | `.remindlist 1`
+`.reminddel` `.remindrm` | Deletes a reminder on the specified index.  | `.remindrm 3`
 `.remindtemplate` | Sets message for when the remind is triggered.  Available placeholders are `%user%` - user who ran the command, `%message%` - Message specified in the remind, `%target%` - target channel of the remind. **Bot owner only** | `.remindtemplate %user%, do %message%!`
 `.repeatinvoke` `.repinv` | Immediately shows the repeat message on a certain index and restarts its timer. **Requires ManageMessages server permission.** | `.repinv 1`
 `.repeatremove` `.reprm` | Removes a repeating message on a specified index. Use `.repeatlist` to see indexes. **Requires ManageMessages server permission.** | `.reprm 2`
@@ -498,3 +508,4 @@ Commands and aliases | Description | Usage
 `.clubdesc` | Sets the club description. Maximum 150 characters. Club owner only.  | `.clubdesc This is the best club please join.`
 `.clubdisband` | Disbands the club you're the owner of. This action is irreversible.  | `.clubdisband`
 `.clublb` | Shows club rankings on the specified page.  | `.clublb 2`
+`.xpreset` | Resets specified user's XP, or the XP of all users in the server. You can't reverse this action. **Requires Administrator server permission.** | `.xpreset @b1nzy` or `.xpreset`
