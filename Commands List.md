@@ -273,18 +273,18 @@ Submodule | Commands and aliases | Description | Usage
  Perms | `.admin` | Allows whitelisting members and roles for the Admin rank. Guide here: http://enecmdlist.readthedocs.io/en/latest/Permissions/ | `.admin add Staff` `.admin del DjRole` `.admin list`
  Perms | `.dj` | Allows whitelisting members and roles for the DJ rank. Guide here: http://enecmdlist.readthedocs.io/en/latest/Permissions/ | `.dj add @DjRole` `.dj del everyone` `.dj list`
  Perms | `.user` | Allows whitelisting members and roles for the User rank. Guide here: http://enecmdlist.readthedocs.io/en/latest/Permissions/ | `.user add @everyone` `.user del everyone` `.user list`
- Control | `.stop` | Stop the player and clear the playlist. | `.stop`
- Control | `.join` | Makes Ene join your current voice channel. | `.join`
+ Control | `.stop` | Stop the player and clear the playlist. | `.stop` `.s`
+ Control | `.join` | Makes Ene join your current voice channel. | `.join` `.j`
  Control | `.disconnect` | Make Ene leave the current voice channel. | `.disconnect` `.lv`
  Control | `.play <url>` or `.play <search-term>` | Play music from the given URL or search for a track. | `.q` `.play`
  Control | `.pause` | Pause the player. | `.pause`
- Control | `.unpause` | Unpause the player. | `.unpause`
+ Control | `.unpause` | Unpause the player. | `.unpause` `.resume`
  Control | `.split <url>` | Split a YouTube video into a tracklist provided in its description. | `.split <url>`
- Control | `.select n OR .play n` | Select one of the offered tracks after a search to play. | `.select n` `.play n`
+ Control | `.select 1` or `.play 4` | Select one of the offered tracks after a search to play. | `.select 4` `.play 4`
  Control | `.songrepeat single|all|off` | Toggle between repeat modes. | `.srp`
  Control | `.shuffle` | Toggle shuffle mode for the current queue. | `.shuffle`
  Control | `.reshuffle` | Reshuffle the current queue. | `reshuffle`
- Control | `.skip OR .skip n OR .skip n-m OR .skip @Users...` | Skip the current song, the nth song in the queue, all songs from n to m, or all songs from mentioned users. Please use in moderation. | `.s` `.skip`
+ Control | `.skip` or `skip 2` | Skip the current song, the nth song in the queue, all songs from n to m, or all songs from mentioned users. Please use in moderation. | `.skip 10` `.skip`
  Control | `.volume <0-150>` | Changes the volume. Values are 0-150 and 100 is the default. | `.volume`
  Control | `.destroy` | Reset the player and clear the playlist. | `.d` `.destory`
  Info | `.nowplaying` | Display the currently playing song. | `.np` `nowplaying`
