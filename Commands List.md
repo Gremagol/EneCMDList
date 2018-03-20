@@ -26,15 +26,15 @@ Submodule | Commands and aliases | Description | Usage
  Administration | `.settopic` `.st` | Sets a topic on the current channel. **Requires ManageChannels server permission.** | `.st My new topic`
  Administration | `.setchanlname` `.schn` | Changes the name of the current channel. **Requires ManageChannels server permission.** | `.schn NewName`
  Administration | `.edit` | Edits bot's message, you have to specify message ID and new text. Supports embeds. **Requires ManageMessages server permission.** | `.edit 7479498384 Hi :^)`
- AutoAssignRoleCommands | `.autoassignrole` `.aar` | Automaticaly assigns a specified role to every user who joins the server. Provide no arguments to disable. **Requires ManageRoles server permission.** | `.aar` or `.aar RoleName`
+ AutoAssignRoleCommands | `.autoassignrole` `.aar` | Automaticaly assigns a specified role to every user who joins the server. Provide no parameters to disable. **Requires ManageRoles server permission.** | `.aar` or `.aar RoleName`
  DangerousCommands | `.execsql` | Executes an sql command and returns the number of affected rows. Dangerous. **Bot owner only** | `.execsql UPDATE DiscordUser SET CurrencyAmount=CurrencyAmount+1234`
  DangerousCommands | `.deletewaifus` | Deletes everything from WaifuUpdates and WaifuInfo tables. **Bot owner only** | `.deletewaifus`
  DangerousCommands | `.deletecurrency` | Deletes everything from Currency and CurrencyTransactions. **Bot owner only** | `.deletecurrency`
  DangerousCommands | `.deleteplaylists` | Deletes everything from MusicPlaylists. **Bot owner only** | `.deleteplaylists`
  DangerousCommands | `.deleteexp` | deleteexp **Bot owner only** | `deleteexp`
  GameChannelCommands | `.gvc` | Toggles game voice channel feature in the voice channel you're currently in. Users who join the game voice channel will get automatically redirected to the voice channel with the name of their current game, if it exists. Can't move users to channels that the bot has no connect permission for. One per server. **Requires Administrator server permission.** | `.gvc`
- LocalizationCommands | `.languageset` `.langset` | Sets this server's response language. If bot's response strings have been translated to that language, bot will use that language in this server. Reset by using `default` as the locale name. Provide no arguments to see currently set language.  | `.langset de-DE ` or `.langset default`
- LocalizationCommands | `.langsetdefault` `.langsetd` | Sets the bot's default response language. All servers which use a default locale will use this one. Setting to `default` will use the host's current culture. Provide no arguments to see currently set language.  | `.langsetd en-US` or `.langsetd default`
+ LocalizationCommands | `.languageset` `.langset` | Sets this server's response language. If bot's response strings have been translated to that language, bot will use that language in this server. Reset by using `default` as the locale name. Provide no parameters to see currently set language.  | `.langset de-DE ` or `.langset default`
+ LocalizationCommands | `.langsetdefault` `.langsetd` | Sets the bot's default response language. All servers which use a default locale will use this one. Setting to `default` will use the host's current culture. Provide no parameters to see currently set language.  | `.langsetd en-US` or `.langsetd default`
  LocalizationCommands | `.languageslist` `.langli` | List of languages for which translation (or part of it) exist atm.  | `.langli`
  LogCommands | `.logserver` | Enables or Disables ALL log events. If enabled, all log events will log to this channel. **Requires Administrator server permission.** | `.logserver enable` or `.logserver disable`
  LogCommands | `.logignore` | Toggles whether the `.logserver` command ignores this channel. Useful if you have hidden admin channel and public log channel. **Requires Administrator server permission.** | `.logignore`
@@ -51,16 +51,16 @@ Submodule | Commands and aliases | Description | Usage
  PlayingRotateCommands | `.addplaying` `.adpl` | Adds a specified string to the list of playing strings to rotate. You have to pick either 'Playing', 'Watching' or 'Listening' as the first parameter. Supported placeholders: `%servers%`, `%users%`, `%playing%`, `%queued%`, `%time%`, `%shardid%`, `%shardcount%`, `%shardguilds%`. **Bot owner only** | `.adpl Playing with you` or `.adpl Watching you sleep`
  PlayingRotateCommands | `.listplaying` `.lipl` | Lists all playing statuses with their corresponding number. **Bot owner only** | `.lipl`
  PlayingRotateCommands | `.removeplaying` `.rmpl` `.repl` | Removes a playing string on a given number. **Bot owner only** | `.rmpl`
- PrefixCommands | `.prefix` | Sets this server's prefix for all bot commands. Provide no arguments to see the current server prefix. **Setting prefix requires Administrator server permission.**  | `.prefix +`
- PrefixCommands | `.defprefix` | Sets bot's default prefix for all bot commands. Provide no arguments to see the current default prefix. This will not change this server's current prefix. **Bot owner only** | `.defprefix +`
- ProtectionCommands | `.antiraid` | Sets an anti-raid protection on the server. First argument is number of people which will trigger the protection. Second one is a time interval in which that number of people needs to join in order to trigger the protection, and third argument is punishment for those people (Kick, Ban, Mute) **Requires Administrator server permission.** | `.antiraid 5 20 Kick`
- ProtectionCommands | `.antispam` | Stops people from repeating same message X times in a row. You can specify to either mute, kick or ban the offenders. If you're using mute, you can add a number of seconds at the end to use a timed mute. Max message count is 10. **Requires Administrator server permission.** | `.antispam 3 Mute` or `.antispam 4 Kick` or `.antispam 6 Ban`
+ PrefixCommands | `.prefix` | Sets this server's prefix for all bot commands. Provide no parameters to see the current server prefix. **Setting prefix requires Administrator server permission.**  | `.prefix +`
+ PrefixCommands | `.defprefix` | Sets bot's default prefix for all bot commands. Provide no parameters to see the current default prefix. This will not change this server's current prefix. **Bot owner only** | `.defprefix +`
+ ProtectionCommands | `.antiraid` | Sets an anti-raid protection on the server. Provide no parameters to disable. First parameter is number of people which will trigger the protection. Second parameter is a time interval in which that number of people needs to join in order to trigger the protection, and third parameter is punishment for those people (Kick, Ban, Mute) **Requires Administrator server permission.** | `.antiraid 5 20 Kick` or `.antiraid`
+ ProtectionCommands | `.antispam` | Stops people from repeating same message X times in a row. Provide no parameters to disable. You can specify to either mute, kick or ban the offenders. If you're using mute, you can add a number of seconds at the end to use a timed mute. Max message count is 10. **Requires Administrator server permission.** | `.antispam 3 Mute` or `.antispam 4 Kick` or `.antispam`
  ProtectionCommands | `.antispamignore` | Toggles whether antispam ignores current channel. Antispam must be enabled. **Requires Administrator server permission.** | `.antispamignore`
  ProtectionCommands | `.antilist` `.antilst` | Shows currently enabled protection features.  | `.antilist`
  PruneCommands | `.prune` `.clear` | `.prune` removes all Ene's messages in the last 100 messages. `.prune X` removes last `X` number of messages from the channel (up to 100). `.prune @Someone` removes all Someone's messages in the last 100 messages. `.prune @Someone X` removes last `X` number of 'Someone's' messages in the channel.  | `.prune` or `.prune 5` or `.prune @Someone` or `.prune @Someone X`
- SlowModeCommands | `.slowmode` | Toggles slowmode. Disable by specifying no parameters. To enable, specify a number of messages each user can send, and an interval in seconds. For example 1 message every 5 seconds. **Requires ManageMessages server permission.** | `.slowmode 1 5` or `.slowmode`
+ SlowModeCommands | `.slowmode` | Toggles slowmode. Disable by specifying no parameters. Slowmode deletes any excess messages users type over the specified limit of messages per X seconds. To enable, specify a number of messages each user can send, followed by an interval in seconds. For example 1 message every 5 seconds. **Requires ManageMessages server permission.** | `.slowmode 1 5` or `.slowmode`
  SlowModeCommands | `.slowmodewl` | Ignores a role or a user from the slowmode feature. **Requires ManageMessages server permission.** | `.slowmodewl SomeRole` or `.slowmodewl AdminDude`
- RoleCommands | `.reactionroles` `.rero` | Specify role names and server emojis with which they're represented, the bot will then add those emojis to the previous message in the channel, and users will be able to get the roles by clicking on the emoji. You can set 'excl' as the first argument to make them exclusive. You can have up to 5 of these enabled on one server at a time. **Requires ManageRoles server permission.** | `.reactionroles Gamer :SomeServerEmoji: Streamer :Other: Watcher :Other2:` or `.reactionroles excl Horde :Horde: Alliance :Alliance:`
+ RoleCommands | `.reactionroles` `.rero` | Specify role names and server emojis with which they're represented, the bot will then add those emojis to the previous message in the channel, and users will be able to get the roles by clicking on the emoji. You can set 'excl' as the first parameter to make them exclusive. You can have up to 5 of these enabled on one server at a time. **Requires ManageRoles server permission.** | `.reactionroles Gamer :SomeServerEmoji: Streamer :Other: Watcher :Other2:` or `.reactionroles excl Horde :Horde: Alliance :Alliance:`
  RoleCommands | `.reactionroleslist` `.reroli` | Lists all ReactionRole messages on this channel and their indexes. **Requires ManageRoles server permission.** | `.reactionroleslist`
  RoleCommands | `.reactionrolesremove` `.rerorm` | Removed a ReactionRole message on the specified index. **Requires ManageRoles server permission.** | `.reactionrolesrm 1`
  RoleCommands | `.setrole` `.sr` | Sets a role for a given user. **Requires ManageRoles server permission.** | `.sr @User Guest`
@@ -68,6 +68,7 @@ Submodule | Commands and aliases | Description | Usage
  RoleCommands | `.renamerole` `.renr` | Renames a role. The role you are renaming must be lower than bot's highest role. **Requires ManageRoles server permission.** | `.renr "First role" SecondRole`
  RoleCommands | `.removeallroles` `.rar` | Removes all roles from a mentioned user. **Requires ManageRoles server permission.** | `.rar @User`
  RoleCommands | `.createrole` `.cr` | Creates a role with a given name. **Requires ManageRoles server permission.** | `.cr Awesome Role`
+ RoleCommands | `.deleterole` `.dr` | Deletes a role with a given name. **Requires ManageRoles server permission.** | `.dr Awesome Role`
  RoleCommands | `.rolehoist` `.rh` | Toggles whether this role is displayed in the sidebar or not. **Requires ManageRoles server permission.** | `.rh Guests` or `.rh "Space Wizards"`
  RoleCommands | `.rolecolor` `.roleclr` | Set a role's color to the hex or 0-255 rgb color value provided. Provide no color in order to see the hex of the color of the specified role.  | `.roleclr Admin` or `.roleclr Admin ffba55` or `.roleclr Admin 255 128 0`
  RoleCommands | `.mentionrole` `.menro` | Mentions a role. If the role is not mentionable, bot will make it mentionable for a moment. **Requires MentionEveryone server permission.** | `.menro RoleName`
@@ -94,9 +95,9 @@ Submodule | Commands and aliases | Description | Usage
  SelfCommands | `.setname` `.newnm` | Gives the bot a new name. **Bot owner only** | `.newnm BotName`
  SelfCommands | `.setnick` | Changes the nickname of the bot on this server. You can also target other users to change their nickname. **Requires ManageNicknames server permission.** | `.setnick BotNickname` or `.setnick @SomeUser New Nickname`
  SelfCommands | `.setstatus` | Sets the bot's status. (Online/Idle/Dnd/Invisible) **Bot owner only** | `.setstatus Idle`
- SelfCommands | `.setavatar` `.setav` | Sets a new avatar image for the NadekoBot. Argument is a direct link to an image. **Bot owner only** | `.setav http://i.imgur.com/xTG3a1I.jpg`
+ SelfCommands | `.setavatar` `.setav` | Sets a new avatar image for the NadekoBot. Parameter is a direct link to an image. **Bot owner only** | `.setav http://i.imgur.com/xTG3a1I.jpg`
  SelfCommands | `.game` | Sets the bots game status to either Playing, Listening, or Watching. **Bot owner only** | `.setgame Playing with snakes.` or `.setgame Watching anime.` or `.setgame Listening music.`
- SelfCommands | `.setstream` | Sets the bots stream. First argument is the twitch link, second argument is stream name. **Bot owner only** | `.setstream TWITCHLINK Hello`
+ SelfCommands | `.setstream` | Sets the bots stream. First parameter is the twitch link, second parameter is stream name. **Bot owner only** | `.setstream TWITCHLINK Hello`
  SelfCommands | `.send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`. **Bot owner only** | `.send serverid|c:channelid message` or `.send serverid|u:userid message`
  SelfCommands | `.imagesreload` | Reloads images bot is using. Safe to use even when bot is being used heavily. **Bot owner only** | `.imagesreload`
  SelfCommands | `.botconfigreload` | Reloads bot configuration in case you made changes to the BotConfig table either with .execsql or manually in the .db file. **Bot owner only** | `.botconfigreload`
@@ -121,7 +122,7 @@ Submodule | Commands and aliases | Description | Usage
  UserPunishCommands | `.softban` `.sb` | Bans and then unbans a user by ID or name with an optional message. **Requires KickMembers server permission.** **Requires ManageMessages server permission.** | `.sb "@some Guy" Your behaviour is toxic.`
  UserPunishCommands | `.kick` `.k` | Kicks a mentioned user. **Requires KickMembers server permission.** | `.k "@some Guy" Your behaviour is toxic.`
  UserPunishCommands | `.masskill` | Specify a new-line separated list of `userid reason`. You can use Username#discrim instead of UserId. Specified users will be banned from the current server, blacklisted from the bot, and have all of their flowers taken away. **Requires BanMembers server permission.** **Bot owner only** | `.masskill BadPerson#1234 Toxic person`
- VcRoleCommands | `.vcrole` | Sets or resets a role which will be given to users who join the voice channel you're in when you run this command. Provide no role name to disable. You must be in a voice channel to run this command. **Requires ManageRoles server permission.** **Requires ManageChannels server permission.** | `.vcrole SomeRole` or `.vcrole`
+ VcRoleCommands | `.vcrole` | Sets or resets a role which will be given to users who join the voice channel you're in when you run this command. Provide no role name to disable. You must be in a voice channel to run this command. **Requires ManageRoles server permission.** | `.vcrole SomeRole` or `.vcrole`
  VcRoleCommands | `.vcrolelist` | Shows a list of currently set voice channel roles.  | `.vcrolelist`
 
 ###### [Back to ToC](#table-of-contents)
@@ -131,7 +132,7 @@ Submodule | Commands and aliases | Description | Usage
 ----------|----------------|--------------|-------
  CustomReactions | `.addcustreact` `.acr` | Add a custom reaction with a trigger and a response. Running this command in server requires the Administration permission. Running this command in DM is Bot Owner only and adds a new global custom reaction. Guide here: <http://enecmdlist.readthedocs.io/en/latest/Custom%20Reactions/>  | `.acr "hello" Hi there %user%`
  CustomReactions | `.editcustreact` `.ecr` | Edits the custom reaction's response given its ID.  | `.ecr 123 I'm a magical girl`
- CustomReactions | `.listcustreact` `.lcr` | Lists global or server custom reactions (20 commands per page). Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions. Specifying `all` argument instead of the number will DM you a text file with a list of all custom reactions.  | `.lcr 1` or `.lcr all`
+ CustomReactions | `.listcustreact` `.lcr` | Lists global or server custom reactions (20 commands per page). Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions. Specifying `all` parameter instead of the number will DM you a text file with a list of all custom reactions.  | `.lcr 1` or `.lcr all`
  CustomReactions | `.listcustreactg` `.lcrg` | Lists global or server custom reactions (20 commands per page) grouped by trigger, and show a number of responses for each. Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions.  | `.lcrg 1`
  CustomReactions | `.showcustreact` `.scr` | Shows a custom reaction's response on a given ID.  | `.scr 1`
  CustomReactions | `.delcustreact` `.dcr` | Deletes a custom reaction on a specific index. If ran in DM, it is bot owner only and deletes a global custom reaction. If ran in a server, it requires Administration privileges and removes server custom reaction.  | `.dcr 5`
@@ -148,7 +149,7 @@ Submodule | Commands and aliases | Description | Usage
 ----------|----------------|--------------|-------
  Gambling | `.daily` `.timely` | Use to claim your 'timely' currency. Bot owner has to specify the amount and the period on how often you can claim your currency.  | `.daily .timely`
  Gambling | `.timelyreset` | Resets all user timeouts on `.timely` command. **Bot owner only** | `.timelyreset`
- Gambling | `.timelyset` | Sets the 'timely' currency allowance amount for users. Second argument is period in hours, default is 24 hours. **Bot owner only** | `.timelyset 100` or `.timelyset 50 12`
+ Gambling | `.timelyset` | Sets the 'timely' currency allowance amount for users. Second parameter is period in hours, default is 24 hours. **Bot owner only** | `.timelyset 100` or `.timelyset 50 12`
  Gambling | `.raffle` | Prints a name and ID of a random online user from the server, or from the online user in the specified role.  | `.raffle` or `.raffle RoleName`
  Gambling | `.raffleany` | Prints a name and ID of a random user from the server, or from the specified role.  | `.raffleany` or `.raffleany  RoleName`
  Gambling | `.$` `.currency` `.$$` `.$$$` `.cash` `.cur` | Check how much currency a person has. (Defaults to yourself)  | `.$` or `.$ @SomeGuy`
@@ -188,10 +189,10 @@ Submodule | Commands and aliases | Description | Usage
  WaifuClaimCommands | `.claimwaifu` `.claim` | Claim a waifu for yourself by spending currency.  You must spend at least 10% more than her current value unless she set `.affinity` towards you.  | `.claim 50 @Himesama`
  WaifuClaimCommands | `.waifutransfer` | Transfer the ownership of one of your waifus to another user. You must pay 10% of your waifu's value.  | `.waifutransfer @ExWaifu @NewOwner`
  WaifuClaimCommands | `.divorce` | Releases your claim on a specific waifu. You will get some of the money you've spent back unless that waifu has an affinity towards you. 6 hours cooldown.  | `.divorce @CheatingSloot`
- WaifuClaimCommands | `.affinity` | Sets your affinity towards someone you want to be claimed by. Setting affinity will reduce their `.claim` on you by 20%. You can leave second argument empty to clear your affinity. 30 minutes cooldown.  | `.affinity @MyHusband` or `.affinity`
+ WaifuClaimCommands | `.affinity` | Sets your affinity towards someone you want to be claimed by. Setting affinity will reduce their `.claim` on you by 20%. Provide no parameters to clear your affinity. 30 minutes cooldown.  | `.affinity @MyHusband` or `.affinity`
  WaifuClaimCommands | `.waifus` `.waifulb` | Shows top 9 waifus. You can specify another page to show other waifus.  | `.waifus` or `.waifulb 3`
  WaifuClaimCommands | `.waifuinfo` `.waifustats` | Shows waifu stats for a target person. Defaults to you if no user is provided.  | `.waifuinfo @MyCrush` or `.waifuinfo`
- WaifuClaimCommands | `.waifugift` `.gift` `.gifts` | Gift an item to someone. This will increase their waifu value by 50% of the gifted item's value if they don't have affinity set towards you, or 100% if they do. Provide no arguments to see a list of items that you can gift.  | `.gifts` or `.gift Rose @Himesama`
+ WaifuClaimCommands | `.waifugift` `.gift` `.gifts` | Gift an item to someone. This will increase their waifu value by 50% of the gifted item's value if they don't have affinity set towards you, or 100% if they do. Provide no parameters to see a list of items that you can gift.  | `.gifts` or `.gift Rose @Himesama`
  WheelOfFortuneCommands | `.wheeloffortune` `.wheel` | Bets a certain amount of currency on the wheel of fortune. Wheel can stop on one of many different multipliers. Won amount is rounded down to the nearest whole number.  | `.wheel 10`
 
 ###### [Back to ToC](#table-of-contents)
@@ -234,7 +235,7 @@ Submodule | Commands and aliases | Description | Usage
 ----------|----------------|--------------|-------
  Help | `.modules` `.mdls` | Lists all bot modules.  | `.modules`
  Help | `.commands` `.cmds` | List all of the bot's commands from a certain module. You can either specify the full name or only the first few letters of the module name.  | `.commands Administration` or `.cmds Admin`
- Help | `.help` `.h` | Either shows a help for a single command, or DMs you help link if no arguments are specified.  | `.h .cmds` or `.h`
+ Help | `.help` `.h` | Either shows a help for a single command, or DMs you help link if no parameters are specified.  | `.h .cmds` or `.h`
  Help | `.hgit` | Generates the commandlist.md file. **Bot owner only** | `.hgit`
  Help | `.readme` `.guide` | Sends a readme and a guide links to the channel.  | `.readme` or `.guide`
  Help | `.donate` | Instructions for helping the project financially.  | `.donate`
@@ -242,43 +243,12 @@ Submodule | Commands and aliases | Description | Usage
 
 ###### [Back to ToC](#table-of-contents)
 
-### Music  
-Submodule | Commands and aliases | Description | Usage
-----------|----------------|--------------|-------
-Music | `.config` | Gives you various options like announce the song that's currently playing in the selected channel. | `.config topic_channel = music` `.config auto_resume = true`
-Music | `.mprefix` | Set a Prefix of the Musicmodule for your Server. **Note:** If you forgot the prefix, you can do `@Ene mprefix` | `.mprefix +` `+smp .`
-Music | `.play <url>` or `.play <search-term>` | Play music from the given URL or search for a track. | `.p` `.play`
-Music | `.list` | Display a list of the current songs in the playlist. | `.l` `.list`
-Music | `.nowplaying` | Display the currently playing song. | `.np` `nowplaying`
-Music | `.skip OR .skip n OR .skip n-m OR .skip @Users...` | Skip the current song, the nth song in the queue, all songs from n to m, or all songs from mentioned users. Please use in moderation. | `.s` `.skip`
-Music | `.stop` | Stop the player and clear the playlist. | `.stop`
-Music | `.pause` | Pause the player. | `.pause`
-Music | `.unpause` | Unpause the player. | `.unpause`
-Music | `.join` | Makes Ene join your current voice channel. | `.join`
-Music | `.disconnect` | Make Ene leave the current voice channel. | `.disconnect` `.lv`
-Music | `.songrepeat single|all|off` | Toggle between repeat modes. | `.srp`
-Music | `.shuffle` | Toggle shuffle mode for the current queue. | `.shuffle`
-Music | `.reshuffle` | Reshuffle the current queue. | `reshuffle`
-Music | `.forward [[hh:]mm:]ss` | Forward the track by a given amount of time. | `.forward 2:30`
-Music | `.rewind [[hh:]mm:]ss` | Rewind the track by a given amount of time. | `.rewind 30`
-Music | `.seek [[hh:]mm:]ss` | Set the position of the track to the given time. | `.seek 2:45:00`
-Music | `.restart` | Restart the currently playing track. | `.restart`
-Music | `.export` | Export the current queue to a hastebin link, can be later used as a playlist. | `.export`
-Music | `.split <url>` | Split a YouTube video into a tracklist provided in its description. | `.split <url>`
-Music | `.select n OR .play n` | Select one of the offered tracks after a search to play. | `.select n` `.play n`
-Music | `.gensokyo` | Show the current song played on gensokyoradio.net | `.gensokyo`
-Music | `.volume <0-150>` | Changes the volume. Values are 0-150 and 100 is the default. | `.volume`
-Music | `.history` | Display a list of the songs in playlist history. | `.h` `.history`
-Music | `.destroy` | Reset the player and clear the playlist. | `.d` `.destory`
-
-###### [Back to ToC](#table-of-contents)
-
 ### NSFW  
 Submodule | Commands and aliases | Description | Usage
 ----------|----------------|--------------|-------
- NSFW | `.autohentai` | Posts a hentai every X seconds with a random tag from the provided tags. Use `|` to separate tags. 20 seconds minimum. Provide no arguments to disable. **Requires ManageMessages channel permission.** | `.autohentai 30 yuri|tail|long_hair` or `.autohentai`
- NSFW | `.autoboobs` | Posts a boobs every X seconds. 20 seconds minimum. Provide no arguments to disable. **Requires ManageMessages channel permission.** | `.autoboobs 30` or `.autoboobs`
- NSFW | `.autobutts` | Posts a butts every X seconds. 20 seconds minimum. Provide no arguments to disable. **Requires ManageMessages channel permission.** | `.autobutts 30` or `.autobutts`
+ NSFW | `.autohentai` | Posts a hentai every X seconds with a random tag from the provided tags. Use `|` to separate tags. 20 seconds minimum. Provide no parameters to disable. **Requires ManageMessages channel permission.** | `.autohentai 30 yuri|tail|long_hair` or `.autohentai`
+ NSFW | `.autoboobs` | Posts a boobs every X seconds. 20 seconds minimum. Provide no parameters to disable. **Requires ManageMessages channel permission.** | `.autoboobs 30` or `.autoboobs`
+ NSFW | `.autobutts` | Posts a butts every X seconds. 20 seconds minimum. Provide no parameters to disable. **Requires ManageMessages channel permission.** | `.autobutts 30` or `.autobutts`
  NSFW | `.hentai` | Shows a hentai image from a random website (gelbooru or danbooru or konachan or atfbooru or yandere) with a given tag. Tag is optional but preferred. Only 1 tag allowed.  | `.hentai yuri`
  NSFW | `.hentaibomb` | Shows a total 5 images (from gelbooru, danbooru, konachan, yandere and atfbooru). Tag is optional but preferred.  | `.hentaibomb yuri`
  NSFW | `.yandere` | Shows a random image from yandere with a given tag. Tag is optional but preferred. (multiple tags are appended with +)  | `.yandere tag1+tag2`
@@ -291,6 +261,41 @@ Submodule | Commands and aliases | Description | Usage
  NSFW | `.butts` `.ass` `.butt` | Real adult content.  | `.butts` or `.ass`
  NSFW | `.nsfwtagbl` `.nsfwtbl` | Toggles whether the tag is blacklisted or not in nsfw searches. Provide no parameters to see the list of blacklisted tags.  | `.nsfwtbl poop`
  NSFW | `.nsfwcc` | Clears nsfw cache. **Bot owner only** | `.nsfwcc`
+
+###### [Back to ToC](#table-of-contents)
+
+### Music  
+Submodule | Commands and aliases | Description | Usage
+----------|----------------|--------------|-------
+ Config | `.config` | Gives you various options like announce the song that's currently playing in the selected channel. | `.config topic_channel = music` `.config auto_resume = true` `.cfg`
+ Config | `.mprefix` | Set a Prefix of the Musicmodule for your Server. **Note:** If you forgot the prefix, you can do `@Ene mprefix` | `.mprefix +` `+smp .`
+ Config | `.mlanguage` | Ene supports several user-contributed languages that you can select with this command. | `.mlang` `.mlang de_DE`
+ Perms | `.admin` | Allows whitelisting members and roles for the Admin rank. Guide here: http://enecmdlist.readthedocs.io/en/latest/Permissions/ | `.admin add Staff` `.admin del DjRole` `.admin list`
+ Perms | `.dj` | Allows whitelisting members and roles for the DJ rank. Guide here: http://enecmdlist.readthedocs.io/en/latest/Permissions/ | `.dj add @DjRole` `.dj del everyone` `.dj list`
+ Perms | `.user` | Allows whitelisting members and roles for the User rank. Guide here: http://enecmdlist.readthedocs.io/en/latest/Permissions/ | `.user add @everyone` `.user del everyone` `.user list`
+ Control | `.stop` | Stop the player and clear the playlist. | `.stop`
+ Control | `.join` | Makes Ene join your current voice channel. | `.join`
+ Control | `.disconnect` | Make Ene leave the current voice channel. | `.disconnect` `.lv`
+ Control | `.play <url>` or `.play <search-term>` | Play music from the given URL or search for a track. | `.q` `.play`
+ Control | `.pause` | Pause the player. | `.pause`
+ Control | `.unpause` | Unpause the player. | `.unpause`
+ Control | `.split <url>` | Split a YouTube video into a tracklist provided in its description. | `.split <url>`
+ Control | `.select n OR .play n` | Select one of the offered tracks after a search to play. | `.select n` `.play n`
+ Control | `.songrepeat single|all|off` | Toggle between repeat modes. | `.srp`
+ Control | `.shuffle` | Toggle shuffle mode for the current queue. | `.shuffle`
+ Control | `.reshuffle` | Reshuffle the current queue. | `reshuffle`
+ Control | `.skip OR .skip n OR .skip n-m OR .skip @Users...` | Skip the current song, the nth song in the queue, all songs from n to m, or all songs from mentioned users. Please use in moderation. | `.s` `.skip`
+ Control | `.volume <0-150>` | Changes the volume. Values are 0-150 and 100 is the default. | `.volume`
+ Control | `.destroy` | Reset the player and clear the playlist. | `.d` `.destory`
+ Info | `.nowplaying` | Display the currently playing song. | `.np` `nowplaying`
+ Info | `.list` | Display a list of the current songs in the playlist. | `.lq` `.list` 
+ Info | `.export` | Export the current queue to a hastebin link, can be later used as a playlist. | `.export` `.ex`
+ Info | `.gensokyo` | Show the current song played on gensokyoradio.net | `.gensokyo`
+ Info | `.history` | Display a list of the songs in playlist history. | `.h` `.history`
+ Seeking | `.forward [[hh:]mm:]ss` | Forward the track by a given amount of time. | `.forward 2:30`
+ Seeking | `.rewind [[hh:]mm:]ss` | Rewind the track by a given amount of time. | `.rewind 30`
+ Seeking | `.seek [[hh:]mm:]ss` | Set the position of the track to the given time. | `.seek 2:45:00`
+ Seeking | `.restart` | Restart the currently playing track. | `.restart`
 
 ###### [Back to ToC](#table-of-contents)
 
@@ -340,7 +345,7 @@ Submodule | Commands and aliases | Description | Usage
  Pokemon | `.movelist` `.ml` | Lists the moves you are able to use  | `.ml`
  Pokemon | `.heal` | Heals someone. Revives those who fainted. Costs one Currency.   | `.heal @someone`
  Pokemon | `.type` | Get the poketype of the target.  | `.type @someone`
- Pokemon | `.settype` | Set your poketype. Costs one Currency. Provide no arguments to see a list of available types.  | `.settype fire` or `.settype`
+ Pokemon | `.settype` | Set your poketype. Costs one Currency. Provide no parameters to see a list of available types.  | `.settype fire` or `.settype`
 
 ###### [Back to ToC](#table-of-contents)
 
@@ -401,7 +406,7 @@ Submodule | Commands and aliases | Description | Usage
  PathOfExileCommands | `.pathofexilecurrency` `.poec` | Returns the chaos equivalent of a given currency or exchange rate between two currencies.  | `.poec Standard "Mirror of Kalandra"`
  PathOfExileCommands | `.pathofexileitem` `.poei` | Searches for a Path of Exile item from the Path of Exile GamePedia.  | `.poei "Quill Rain"`
  PlaceCommands | `.placelist` | Shows the list of available tags for the `.place` command.  | `.placelist`
- PlaceCommands | `.place` | Shows a placeholder image of a given tag. Use `.placelist` to see all available tags. You can specify the width and height of the image as the last two optional arguments.  | `.place Cage` or `.place steven 500 400`
+ PlaceCommands | `.place` | Shows a placeholder image of a given tag. Use `.placelist` to see all available tags. You can specify the width and height of the image as the last two optional parameters.  | `.place Cage` or `.place steven 500 400`
  PokemonSearchCommands | `.pokemon` `.pkmn` | Searches for a pokemon.  | `.poke Sylveon`
  PokemonSearchCommands | `.pokemonability` `.pokeab` | Searches for a pokemon ability.  | `.pokeab overgrow`
  StreamNotificationCommands | `.smashcast` `.hb` | Notifies this channel when the specified user starts streaming. **Requires ManageMessages server permission.** | `.smashcast SomeStreamer`
@@ -413,10 +418,10 @@ Submodule | Commands and aliases | Description | Usage
  StreamNotificationCommands | `.liststreams` `.ls` | Lists all streams you are following on this server.  | `.ls`
  StreamNotificationCommands | `.checkstream` `.cs` | Checks if a user is online on a certain streaming platform.  | `.cs twitch MyFavStreamer`
  TranslateCommands | `.translate` `.trans` | Translates from>to text. From the given language to the destination language.  | `.trans en>fr Hello`
- TranslateCommands | `.autotrans` `.at` | Starts automatic translation of all messages by users who set their `.atl` in this channel. You can set "del" argument to automatically delete all translated user messages. **Requires Administrator server permission.** **Bot owner only** | `.at` or `.at del`
- TranslateCommands | `.autotranslang` `.atl` | Sets your source and target language to be used with `.at`. Specify no arguments to remove previously set value.  | `.atl en>fr`
+ TranslateCommands | `.autotrans` `.at` | Starts automatic translation of all messages by users who set their `.atl` in this channel. You can set "del" parameter to automatically delete all translated user messages. **Requires Administrator server permission.** **Bot owner only** | `.at` or `.at del`
+ TranslateCommands | `.autotranslang` `.atl` | Sets your source and target language to be used with `.at`. Specify no parameters to remove previously set value.  | `.atl en>fr`
  TranslateCommands | `.translangs` | Lists the valid languages for translation.  | `.translangs`
- XkcdCommands | `.xkcd` | Shows a XKCD comic. No arguments will retrieve random one. Number argument will retrieve a specific comic, and "latest" will get the latest one.  | `.xkcd` or `.xkcd 1400` or `.xkcd latest`
+ XkcdCommands | `.xkcd` | Shows a XKCD comic. Specify no parameters to retrieve a random one. Number parameter will retrieve a specific comic, and "latest" will get the latest one.  | `.xkcd` or `.xkcd 1400` or `.xkcd latest`
 
 ###### [Back to ToC](#table-of-contents)
 
@@ -456,7 +461,7 @@ Submodule | Commands and aliases | Description | Usage
  QuoteCommands | `.quoteid` `.qid` | Displays the quote with the specified ID number. Quote ID numbers can be found by typing `.liqu [num]` where `[num]` is a number of a page which contains 15 quotes.  | `.qid 123456`
  QuoteCommands | `.quotedel` `.qdel` | Deletes a quote with the specified ID. You have to be either server Administrator or the creator of the quote to delete it.  | `.qdel 123456`
  QuoteCommands | `.delallq` `.daq` | Deletes all quotes on a specified keyword. **Requires Administrator server permission.** | `.delallq kek`
- RemindCommands | `.remind` | Sends a message to you or a channel after certain amount of time. First argument is `me`/`here`/'channelname'. Second argument is time in a descending order (mo>w>d>h>m) example: 1w5d3h10m. Third argument is a (multiword) message.  | `.remind me 1d5h Do something` or `.remind #general 1m Start now!`
+ RemindCommands | `.remind` | Sends a message to you or a channel after certain amount of time. First parameter is `me`/`here`/'channelname'. Second parameter is time in a descending order (mo>w>d>h>m) example: 1w5d3h10m. Third parameter is a (multiword) message.  | `.remind me 1d5h Do something` or `.remind #general 1m Start now!`
  RemindCommands | `.remindlist` `.remindl` `.remindlst` | Lists all reminders you created. Paginated.  | `.remindlist 1`
  RemindCommands | `.reminddel` `.remindrm` | Deletes a reminder on the specified index.  | `.remindrm 3`
  RemindCommands | `.remindtemplate` | Sets message for when the remind is triggered.  Available placeholders are `%user%` - user who ran the command, `%message%` - Message specified in the remind, `%target%` - target channel of the remind. **Bot owner only** | `.remindtemplate %user%, do %message%!`
@@ -464,7 +469,7 @@ Submodule | Commands and aliases | Description | Usage
  RepeatCommands | `.repeatremove` `.reprm` | Removes a repeating message on a specified index. Use `.repeatlist` to see indexes. **Requires ManageMessages server permission.** | `.reprm 2`
  RepeatCommands | `.repeat` | Repeat a message every `X` minutes in the current channel. You can instead specify time of day for the message to be repeated at daily (make sure you've set your server's timezone). You can have up to 5 repeating messages on the server in total. **Requires ManageMessages server permission.** | `.repeat 5 Hello there` or `.repeat 17:30 tea time`
  RepeatCommands | `.repeatlist` `.replst` | Shows currently repeating messages and their indexes. **Requires ManageMessages server permission.** | `.repeatlist`
- StreamRoleCommands | `.streamrole` | Sets a role which is monitored for streamers (FromRole), and a role to add if a user from 'FromRole' is streaming (AddRole). When a user from 'FromRole' starts streaming, they will receive an 'AddRole'. Provide no arguments to disable **Requires ManageRoles server permission.** | `.streamrole "Eligible Streamers" "Featured Streams"`
+ StreamRoleCommands | `.streamrole` | Sets a role which is monitored for streamers (FromRole), and a role to add if a user from 'FromRole' is streaming (AddRole). When a user from 'FromRole' starts streaming, they will receive an 'AddRole'. Provide no parameters to disable **Requires ManageRoles server permission.** | `.streamrole "Eligible Streamers" "Featured Streams"`
  StreamRoleCommands | `.streamrolekw` `.srkw` | Sets keyword which is required in the stream's title in order for the streamrole to apply. Provide no keyword in order to reset. **Requires ManageRoles server permission.** | `.srkw` or `.srkw PUBG`
  StreamRoleCommands | `.streamrolebl` `.srbl` | Adds or removes a blacklisted user. Blacklisted users will never receive the stream role. **Requires ManageRoles server permission.** | `.srbl add @b1nzy#1234` or `.srbl rem @b1nzy#1234`
  StreamRoleCommands | `.streamrolewl` `.srwl` | Adds or removes a whitelisted user. Whitelisted users will receive the stream role even if they don't have the specified keyword in their stream title. **Requires ManageRoles server permission.** | `.srwl add @b1nzy#1234` or `.srwl rem @b1nzy#1234`
