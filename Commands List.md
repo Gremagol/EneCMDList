@@ -270,9 +270,9 @@ Submodule | Commands and aliases | Description | Usage
  Config | `.config` | Gives you various options like announce the song that's currently playing in the selected channel. | `.config topic_channel = music` `.config auto_resume = true` `.cfg`
  Config | `.mprefix` | Set a Prefix of the Musicmodule for your Server. **Note:** If you forgot the prefix, you can do `@Ene mprefix` | `.mprefix +` `+smp .`
  Config | `.mlanguage` | Ene supports several user-contributed languages that you can select with this command. | `.mlang` `.mlang de_DE`
- Perms | `.admin` | Allows whitelisting members and roles for the Admin rank. Guide here: http://enecmdlist.readthedocs.io/en/latest/Permissions/ | `.admin add Staff` `.admin del DjRole` `.admin list`
- Perms | `.dj` | Allows whitelisting members and roles for the DJ rank. Guide here: http://enecmdlist.readthedocs.io/en/latest/Permissions/ | `.dj add @DjRole` `.dj del everyone` `.dj list`
- Perms | `.user` | Allows whitelisting members and roles for the User rank. Guide here: http://enecmdlist.readthedocs.io/en/latest/Permissions/ | `.user add @everyone` `.user del everyone` `.user list`
+ Perms | `.admin` | Allows whitelisting members and roles for the Admin rank. Guide here: [http://enecmdlist.readthedocs.io/en/latest/Permissions/](http://enecmdlist.readthedocs.io/en/latest/Permissions/) | `.admin add Staff` `.admin del DjRole` `.admin list`
+ Perms | `.dj` | Allows whitelisting members and roles for the DJ rank. Guide here: [http://enecmdlist.readthedocs.io/en/latest/Permissions/](http://enecmdlist.readthedocs.io/en/latest/Permissions/) | `.dj add @DjRole` `.dj del everyone` `.dj list`
+ Perms | `.user` | Allows whitelisting members and roles for the User rank. Guide here: [http://enecmdlist.readthedocs.io/en/latest/Permissions/](http://enecmdlist.readthedocs.io/en/latest/Permissions/) | `.user add @everyone` `.user del everyone` `.user list`
  Control | `.stop` | Stop the player and clear the playlist. | `.stop` `.s`
  Control | `.join` | Makes Ene join your current voice channel. | `.join` `.j`
  Control | `.disconnect` | Make Ene leave the current voice channel. | `.disconnect` `.lv`
