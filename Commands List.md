@@ -1,13 +1,13 @@
 ##Table of contents
 - [Help](#help)
 - [Administration](#administration)
+- [CryptoCommands](#cryptocommands)
 - [CustomReactions](#customreactions)
 - [Gambling](#gambling)
 - [Games](#games)
 - [Music](#music)
 - [NSFW](#nsfw)
 - [Permissions](#permissions)
-- [Pokemon](#pokemon)
 - [Searches](#searches)
 - [Utility](#utility)
 - [Xp](#xp)
@@ -27,8 +27,10 @@ Submodule | Commands and aliases | Description | Usage
  Administration | `.setchanlname` `.schn` | Changes the name of the current channel. **Requires ManageChannels server permission.** | `.schn NewName`
  Administration | `.edit` | Edits bot's message, you have to specify message ID and new text. Supports embeds. **Requires ManageMessages server permission.** | `.edit 7479498384 Hi :^)`
  AutoAssignRoleCommands | `.autoassignrole` `.aar` | Automaticaly assigns a specified role to every user who joins the server. Provide no parameters to disable. **Requires ManageRoles server permission.** | `.aar` or `.aar RoleName`
- DangerousCommands | `.execsql` | Executes an sql command and returns the number of affected rows. Dangerous. **Bot owner only** | `.execsql UPDATE DiscordUser SET CurrencyAmount=CurrencyAmount+1234`
- DangerousCommands | `.deletewaifus` | Deletes everything from WaifuUpdates and WaifuInfo tables. **Bot owner only** | `.deletewaifus`
+ DangerousCommands | `.sqlselect` | Executes provided sql query and returns the results. Dangerous. **Bot owner only** | `.sqlselect SELECT * FROM DiscordUser LIMIT 5`
+ DangerousCommands | `.sqlexec` | Executes provided sql command and returns the number of affected rows. Dangerous. **Bot owner only** | `.sqlexec UPDATE DiscordUser SET CurrencyAmount=CurrencyAmount+1234`
+ DangerousCommands | `.deletewaifus` | Deletes everything from WaifuUpdates, WaifuItem and WaifuInfo tables. **Bot owner only** | `.deletewaifus`
+ DangerousCommands | `.deletewaifu` | Deletes everything from WaifuUpdates, WaifuItem and WaifuInfo tables for the specified user. Also makes specified user's waifus free. **Bot owner only** | `.deletewaifus`
  DangerousCommands | `.deletecurrency` | Deletes everything from Currency and CurrencyTransactions. **Bot owner only** | `.deletecurrency`
  DangerousCommands | `.deleteplaylists` | Deletes everything from MusicPlaylists. **Bot owner only** | `.deleteplaylists`
  DangerousCommands | `.deleteexp` | deleteexp **Bot owner only** | `deleteexp`
@@ -58,7 +60,7 @@ Submodule | Commands and aliases | Description | Usage
  ProtectionCommands | `.antispamignore` | Toggles whether antispam ignores current channel. Antispam must be enabled. **Requires Administrator server permission.** | `.antispamignore`
  ProtectionCommands | `.antilist` `.antilst` | Shows currently enabled protection features.  | `.antilist`
  PruneCommands | `.prune` `.clear` | `.prune` removes all Ene's messages in the last 100 messages. `.prune X` removes last `X` number of messages from the channel (up to 100). `.prune @Someone` removes all Someone's messages in the last 100 messages. `.prune @Someone X` removes last `X` number of 'Someone's' messages in the channel.  | `.prune` or `.prune 5` or `.prune @Someone` or `.prune @Someone X`
- SlowModeCommands | `.slowmode` | Toggles slowmode. Slowmode deletes any excess messages users type over the specified limit of messages per X seconds. To enable, specify a number of messages (-m) each user can send, and an interval in seconds (-i).  Disable by specifying no parameters. **Requires ManageMessages server permission.** | `.slowmode -m 1 -s 5` or `.slowmode`
+ SlowModeCommands | `.slowmode` | Toggles slowmode. Slowmode deletes any excess messages users type over the specified limit of messages per X seconds. To enable, specify a number of messages (-m) each user can send, and an interval in seconds (-s).  Disable by specifying no parameters. **Requires ManageMessages server permission.** | `.slowmode -m 1 -s 5` or `.slowmode`
  SlowModeCommands | `.slowmodewl` | Ignores a role or a user from the slowmode feature. **Requires ManageMessages server permission.** | `.slowmodewl SomeRole` or `.slowmodewl AdminDude`
  RoleCommands | `.reactionroles` `.rero` | Specify role names and server emojis with which they're represented, the bot will then add those emojis to the previous message in the channel, and users will be able to get the roles by clicking on the emoji. You can set 'excl' as the first parameter to make them exclusive. You can have up to 5 of these enabled on one server at a time. **Requires ManageRoles server permission.** | `.reactionroles Gamer :SomeServerEmoji: Streamer :Other: Watcher :Other2:` or `.reactionroles excl Horde :Horde: Alliance :Alliance:`
  RoleCommands | `.reactionroleslist` `.reroli` | Lists all ReactionRole messages on this channel and their indexes. **Requires ManageRoles server permission.** | `.reactionroleslist`
@@ -74,6 +76,7 @@ Submodule | Commands and aliases | Description | Usage
  RoleCommands | `.mentionrole` `.menro` | Mentions a role. If the role is not mentionable, bot will make it mentionable for a moment. **Requires MentionEveryone server permission.** | `.menro RoleName`
  SelfAssignedRolesCommands | `.adsarm` | Toggles the automatic deletion of confirmations for `.iam` and `.iamn` commands. **Requires ManageMessages server permission.** | `.adsarm`
  SelfAssignedRolesCommands | `.asar` | Adds a role to the list of self-assignable roles. You can also specify a group. If 'Exclusive self-assignable roles' feature is enabled, users will be able to pick one role per group. **Requires ManageRoles server permission.** | `.asar Gamer` or `.asar 1 Alliance` or `.asar 1 Horde`
+ SelfAssignedRolesCommands | `.sargn` | Sets a self assignable role group name. Provide no name to remove. **Requires ManageRoles server permission.** | `.sargn 1 Faction` or `.sargn 2`
  SelfAssignedRolesCommands | `.rsar` | Removes a specified role from the list of self-assignable roles. **Requires ManageRoles server permission.** | `.rsar`
  SelfAssignedRolesCommands | `.lsar` | Lists self-assignable roles. Shows 20 roles per page.  | `.lsar` or `.lsar 2`
  SelfAssignedRolesCommands | `.togglexclsar` `.tesar` | Toggles whether the self-assigned roles are exclusive. While enabled, users can only have one self-assignable role per group. **Requires ManageRoles server permission.** | `.tesar`
@@ -103,7 +106,7 @@ Submodule | Commands and aliases | Description | Usage
  SelfCommands | `.setstream` | Sets the bots stream. First parameter is the twitch link, second parameter is stream name. **Bot owner only** | `.setstream TWITCHLINK Hello`
  SelfCommands | `.send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`. **Bot owner only** | `.send serverid|c:channelid message` or `.send serverid|u:userid message`
  SelfCommands | `.imagesreload` | Reloads images bot is using. Safe to use even when bot is being used heavily. **Bot owner only** | `.imagesreload`
- SelfCommands | `.botconfigreload` | Reloads bot configuration in case you made changes to the BotConfig table either with .execsql or manually in the .db file. **Bot owner only** | `.botconfigreload`
+ SelfCommands | `.botconfigreload` | Reloads bot configuration in case you made changes to the BotConfig table either with .sqlexec or manually in the .db file. **Bot owner only** | `.botconfigreload`
  ServerGreetCommands | `.greetdel` `.grdel` | Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. **Requires ManageServer server permission.** | `.greetdel 0` or `.greetdel 30`
  ServerGreetCommands | `.greet` | Toggles anouncements on the current channel when someone joins the server. **Requires ManageServer server permission.** | `.greet`
  ServerGreetCommands | `.greetmsg` | Sets a new join announcement message which will be shown in the server's channel. Type `%user%` if you want to mention the new member. Using it with no message will show the current greet message. You can use embed json from <https://gremagol.com/embed-generator> instead of a regular text, if you want the message to be embedded. **Requires ManageServer server permission.** | `.greetmsg Welcome, %user%.`
@@ -130,6 +133,13 @@ Submodule | Commands and aliases | Description | Usage
 
 ###### [Back to ToC](#table-of-contents)
 
+### CryptoCommands  
+Submodule | Commands and aliases | Description | Usage
+----------|----------------|--------------|-------
+ CryptoCommands | `.crypto` `.c` | Shows basic stats about a cryptocurrency from coinmarketcap.com. You can use either a name or an abbreviation of the currency.  | `.c btc` or `.c bitcoin`
+
+###### [Back to ToC](#table-of-contents)
+
 ### CustomReactions  
 Submodule | Commands and aliases | Description | Usage
 ----------|----------------|--------------|-------
@@ -142,8 +152,6 @@ Submodule | Commands and aliases | Description | Usage
  CustomReactions | `.crca` | Toggles whether the custom reaction will trigger if the triggering message contains the keyword (instead of only starting with it).  | `.crca 44`
  CustomReactions | `.crdm` | Toggles whether the response message of the custom reaction will be sent as a direct message.  | `.crdm 44`
  CustomReactions | `.crad` | Toggles whether the message triggering the custom reaction will be automatically deleted.  | `.crad 59`
- CustomReactions | `.crstatsclear` | Resets the counters on `.crstats`. You can specify a trigger to clear stats only for that trigger. **Bot owner only** | `.crstatsclear` or `.crstatsclear rng`
- CustomReactions | `.crstats` | Shows a list of custom reactions and the number of times they have been executed. Paginated with 10 per page. Use `.crstatsclear` to reset the counters.  | `.crstats` or `.crstats 3`
  CustomReactions | `.crclear` | Deletes all custom reactions on this server. **Requires Administrator server permission.** | `.crclear`
 
 ###### [Back to ToC](#table-of-contents)
@@ -151,6 +159,7 @@ Submodule | Commands and aliases | Description | Usage
 ### Gambling  
 Submodule | Commands and aliases | Description | Usage
 ----------|----------------|--------------|-------
+ Gambling | `.economy` | Breakdown of the current state of the bot's economy. Updates every 3 minutes.  | `.economy`
  Gambling | `.daily` `.timely` | Use to claim your 'timely' currency. Bot owner has to specify the amount and the period on how often you can claim your currency.  | `.daily .timely`
  Gambling | `.timelyreset` | Resets all user timeouts on `.timely` command. **Bot owner only** | `.timelyreset`
  Gambling | `.timelyset` | Sets the 'timely' currency allowance amount for users. Second parameter is period in hours, default is 24 hours. **Bot owner only** | `.timelyset 100` or `.timelyset 50 12`
@@ -172,7 +181,7 @@ Submodule | Commands and aliases | Description | Usage
  BlackJackCommands | `.stand` | Finish your turn in the blackjack game.  | `.stand`
  BlackJackCommands | `.double` | In the blackjack game, double your bet in order to receive exactly one more card, and your turn ends.  | `.double`
  Connect4Commands | `.connect4` `.con4` | Creates or joins an existing connect4 game. 2 players are required for the game. Objective of the game is to get 4 of your pieces next to each other in a vertical, horizontal or diagonal line. You can specify a bet when you create a game and only users who bet the same amount will be able to join your game.  | `.connect4`
- CurrencyEventsCommands | `.event` | Starts one of the events seen on public Ene. Events: `reaction` **Bot owner only** | `.eventstart reaction` or `.eventstart reaction -d 1 -a 50 --pot-size 1500`
+ CurrencyEventsCommands | `.event` | Starts one of the events seen on public Ene. Events: `reaction`, `gamestatus` **Bot owner only** | `.eventstart reaction` or `.eventstart reaction -d 1 -a 50 --pot-size 1500`
  CurrencyRaffleCommands | `.rafflecur` | Starts or joins a currency raffle with a specified amount. Users who join the raffle will lose the amount of currency specified and add it to the pot. After 30 seconds, random winner will be selected who will receive the whole pot. There is also a `mixed` mode in which the users will be able to join the game with any amount of currency, and have their chances be proportional to the amount they've bet.  | `.rafflecur 20` or `.rafflecur mixed 15`
  DiceRollCommands | `.roll` | Rolls 0-100. If you supply a number `X` it rolls up to 30 normal dice. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`. `Y` can be a letter 'F' if you want to roll fate dice instead of dnd.  | `.roll` or `.roll 7` or `.roll 3d5` or `.roll 5dF`
  DiceRollCommands | `.rolluo` | Rolls `X` normal dice (up to 30) unordered. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`.  | `.rolluo` or `.rolluo 7` or `.rolluo 3d5`
@@ -216,9 +225,10 @@ Submodule | Commands and aliases | Description | Usage
  HangmanCommands | `.hangmanstop` | Stops the active hangman game on this channel if it exists.  | `.hangmanstop`
  LeetCommands | `.leet` | Converts a text to leetspeak with 6 (1-6) severity levels  | `.leet 3 Hello`
  NunchiCommands | `.nunchi` | Creates or joins an existing nunchi game. Users have to count up by 1 from the starting number shown by the bot. If someone makes a mistake (types an incorrect number, or repeats the same number) they are out of the game and a new round starts without them.  Minimum 3 users required.  | `.nunchi`
- PlantPickCommands | `.pick` | Picks the currency planted in this channel. 60 seconds cooldown.  | `.pick`
- PlantPickCommands | `.plant` | Spend an amount of currency to plant it in this channel. Default is 1. (If bot is restarted or crashes, the currency will be lost)  | `.plant` or `.plant 5`
+ PlantPickCommands | `.pick` | Picks the currency planted in this channel. If the plant has a password, you need to specify it.  | `.pick` or `.pick passwd`
+ PlantPickCommands | `.plant` | Spend an amount of currency to plant it in this channel. Default is 1. You can specify the password after the amount. Password has to be alphanumeric and it will be trimmed down to 10 characters if it's longer.  | `.plant 5` or `.plant 10 meow`
  PlantPickCommands | `.gencurrency` `.gc` | Toggles currency generation on this channel. Every posted message will have chance to spawn currency. Chance is specified by the Bot Owner. (default is 2%) **Requires ManageMessages server permission.** | `.gc`
+ PlantPickCommands | `.gencurlist` `.gclist` | Shows the list of server and channel ids where gc is enabled. Paginated with 9 per page. **Requires ManageMessages server permission.** **Bot owner only** | `.gclist`
  PollCommands | `.poll` `.ppoll` | Creates a public poll which requires users to type a number of the voting option in the channel command is ran in. **Requires ManageMessages server permission.** | `.ppoll Question?;Answer1;Answ 2;A_3`
  PollCommands | `.pollstats` | Shows the poll results without stopping the poll on this server. **Requires ManageMessages server permission.** | `.pollstats`
  PollCommands | `.pollend` | Stops active poll on this server and prints the results in this channel. **Requires ManageMessages server permission.** | `.pollend`
@@ -285,9 +295,9 @@ Submodule | Commands and aliases | Description | Usage
 ### NSFW  
 Submodule | Commands and aliases | Description | Usage
 ----------|----------------|--------------|-------
- NSFW | `.autohentai` | Posts a hentai every X seconds with a random tag from the provided tags. Use `|` to separate tags. 20 seconds minimum. Provide no parameters to disable. **Requires ManageMessages channel permission.** | `.autohentai 30 yuri|tail|long_hair` or `.autohentai`
+ NSFW | `.autohentai` | Posts a hentai every X seconds with a random tag from the provided tags. Use `|` to separate tag groups. Random group will be chosen every time the image is sent. Use `+` for multiple tags (max 2 per group). 20 seconds minimum. Provide no parameters to disable. **Requires ManageMessages channel permission.** | `.autohentai 30 yuri+kissing|tail+long_hair` or `.autohentai`
  NSFW | `.autoboobs` | Posts a boobs every X seconds. 20 seconds minimum. Provide no parameters to disable. **Requires ManageMessages channel permission.** | `.autoboobs 30` or `.autoboobs`
- NSFW | `.autobutts` | Posts a butts every X seconds. 20 seconds minimum. Provide no parameters to disable. **Requires ManageMessages channel permission.** | `.autobutts 30` or `.autobutts`
+ NSFW | `.autobutts` | Posts a butt every X seconds. 20 seconds minimum. Provide no parameters to disable. **Requires ManageMessages channel permission.** | `.autobutts 30` or `.autobutts`
  NSFW | `.hentai` | Shows a hentai image from a random website (gelbooru or danbooru or konachan or atfbooru or yandere) with a given tag. Tag is optional but preferred. Only 1 tag allowed.  | `.hentai yuri`
  NSFW | `.hentaibomb` | Shows a total 5 images (from gelbooru, danbooru, konachan, yandere and atfbooru). Tag is optional but preferred.  | `.hentaibomb yuri`
  NSFW | `.yandere` | Shows a random image from yandere with a given tag. Tag is optional but preferred. (multiple tags are appended with +)  | `.yandere tag1+tag2`
@@ -344,22 +354,10 @@ Submodule | Commands and aliases | Description | Usage
 
 ###### [Back to ToC](#table-of-contents)
 
-### Pokemon  
-Submodule | Commands and aliases | Description | Usage
-----------|----------------|--------------|-------
- Pokemon | `.attack` | Attacks a target with the given move. Use `.movelist` to see a list of moves your type can use.  | `.attack "vine whip" @someguy`
- Pokemon | `.movelist` `.ml` | Lists the moves you are able to use  | `.ml`
- Pokemon | `.heal` | Heals someone. Revives those who fainted. Costs one Currency.   | `.heal @someone`
- Pokemon | `.type` | Get the poketype of the target.  | `.type @someone`
- Pokemon | `.settype` | Set your poketype. Costs one Currency. Provide no parameters to see a list of available types.  | `.settype fire` or `.settype`
-
-###### [Back to ToC](#table-of-contents)
-
 ### Searches  
 Submodule | Commands and aliases | Description | Usage
 ----------|----------------|--------------|-------
  Searches | `.lolban` | Shows top banned champions ordered by ban rate.  | `.lolban`
- Searches | `.crypto` `.c` | Shows basic stats about a cryptocurrency from coinmarketcap.com. You can use either a name or an abbreviation of the currency.  | `.c btc` or `.c bitcoin`
  Searches | `.rip` | rip  | `rip`
  Searches | `.say` | Bot will send the message you typed in this channel. Supports embeds. **Requires ManageMessages server permission.** | `.say hi`
  Searches | `.weather` `.we` | Shows weather data for a specified city. You can also specify a country after a comma.  | `.we Moscow, RU`
@@ -448,7 +446,6 @@ Submodule | Commands and aliases | Description | Usage
  Utility | `.serverid` `.sid` | Shows current server ID.  | `.sid`
  Utility | `.roles` | List roles on this server or roles of a user if specified. Paginated, 20 roles per page.  | `.roles 2` or `.roles @Someone`
  Utility | `.channeltopic` `.ct` | Sends current channel's topic as a message.  | `.ct`
- Utility | `.createinvite` `.crinv` | Creates a new invite which has infinite max uses and never expires. **Requires CreateInstantInvite channel permission.** | `.crinv`
  Utility | `.stats` `.info` | Shows some basic stats for Ene.  | `.stats`
  Utility | `.showemojis` `.se` | Shows a name and a link to every SPECIAL emoji in the message.  | `.se A message full of SPECIAL emojis`
  Utility | `.listservers` | Lists servers the bot is on with some basic info. 15 per page. **Bot owner only** | `.listservers 3`
@@ -464,6 +461,9 @@ Submodule | Commands and aliases | Description | Usage
  InfoCommands | `.channelinfo` `.cinfo` | Shows info about the channel. If no channel is supplied, it defaults to current one.  | `.cinfo #some-channel`
  InfoCommands | `.userinfo` `.uinfo` | Shows info about the user. If no user is supplied, it defaults a user running the command.  | `.uinfo @SomeUser`
  InfoCommands | `.activity` | Checks for spammers. **Bot owner only** | `.activity`
+ InviteCommands | `.invitecreate` `.invcr` | Creates a new invite which has infinite max uses and never expires. **Requires CreateInstantInvite channel permission.** | `.crinv`
+ InviteCommands | `.invitelist` `.invlist` `.invlst` | Lists all invites for this channel. Paginated with 9 per page. **Requires ManageChannels channel permission.** | `.invitelist` or `.invlist 3`
+ InviteCommands | `.invitedelete` `.invrm` `.invdel` | Deletes an invite on the specified index. Use `.invitelist` to see the list of invites. **Requires ManageChannels channel permission.** | `.invrm 2`
  PatreonCommands | `.parewrel` | Forces the update of the list of patrons who are eligible for the reward. **Bot owner only** | `.parewrel`
  PatreonCommands | `.clparew` `.claparew` | Claim patreon rewards. If you're subscribed to bot owner's patreon you can use this command to claim your rewards - assuming bot owner did setup has their patreon key.  | `.clparew`
  QuoteCommands | `.listquotes` `.liqu` | Lists all quotes on the server ordered alphabetically or by ID. 15 Per page.  | `.liqu 3` or `.liqu 3 id`
