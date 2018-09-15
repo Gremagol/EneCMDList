@@ -1,7 +1,6 @@
 ##Table of contents
 - [Help](#help)
 - [Administration](#administration)
-- [CryptoCommands](#cryptocommands)
 - [CustomReactions](#customreactions)
 - [Gambling](#gambling)
 - [Games](#games)
@@ -34,14 +33,15 @@ Submodule | Commands and aliases | Description | Usage
  DangerousCommands | `.deletecurrency` | Deletes everything from Currency and CurrencyTransactions. **Bot owner only** | `.deletecurrency`
  DangerousCommands | `.deleteplaylists` | Deletes everything from MusicPlaylists. **Bot owner only** | `.deleteplaylists`
  DangerousCommands | `.deleteexp` | deleteexp **Bot owner only** | `deleteexp`
+ DangerousCommands | `.deleteunusedcrnq` | Deletes all quotes and custom reactions which are older than a week and haven't been used a single time. **Bot owner only** | `.deleteunusedcrnq`
  GameChannelCommands | `.gvc` | Toggles game voice channel feature in the voice channel you're currently in. Users who join the game voice channel will get automatically redirected to the voice channel with the name of their current game, if it exists. Can't move users to channels that the bot has no connect permission for. One per server. **Requires Administrator server permission.** | `.gvc`
  LocalizationCommands | `.languageset` `.langset` | Sets this server's response language. If bot's response strings have been translated to that language, bot will use that language in this server. Reset by using `default` as the locale name. Provide no parameters to see currently set language.  | `.langset de-DE ` or `.langset default`
  LocalizationCommands | `.langsetdefault` `.langsetd` | Sets the bot's default response language. All servers which use a default locale will use this one. Setting to `default` will use the host's current culture. Provide no parameters to see currently set language.  | `.langsetd en-US` or `.langsetd default`
  LocalizationCommands | `.languageslist` `.langli` | List of languages for which translation (or part of it) exist atm.  | `.langli`
- LogCommands | `.logserver` | Enables or Disables ALL log events. If enabled, all log events will log to this channel. **Requires Administrator server permission.** | `.logserver enable` or `.logserver disable`
- LogCommands | `.logignore` | Toggles whether the `.logserver` command ignores this channel. Useful if you have hidden admin channel and public log channel. **Requires Administrator server permission.** | `.logignore`
- LogCommands | `.logevents` | Shows a list of all events you can subscribe to with `.log` **Requires Administrator server permission.** | `.logevents`
- LogCommands | `.log` | Toggles logging event. Disables it if it is active anywhere on the server. Enables if it isn't active. Use `.logevents` to see a list of all events you can subscribe to. **Requires Administrator server permission.** | `.log userpresence` or `.log userbanned`
+ LogCommands | `.logserver` | Enables or Disables ALL log events. If enabled, all log events will log to this channel. **Requires Administrator server permission.** **Bot owner only** | `.logserver enable` or `.logserver disable`
+ LogCommands | `.logignore` | Toggles whether the `.logserver` command ignores this channel. Useful if you have hidden admin channel and public log channel. **Requires Administrator server permission.** **Bot owner only** | `.logignore`
+ LogCommands | `.logevents` | Shows a list of all events you can subscribe to with `.log` **Requires Administrator server permission.** **Bot owner only** | `.logevents`
+ LogCommands | `.log` | Toggles logging event. Disables it if it is active anywhere on the server. Enables if it isn't active. Use `.logevents` to see a list of all events you can subscribe to. **Requires Administrator server permission.** **Bot owner only** | `.log userpresence` or `.log userbanned`
  MuteCommands | `.setmuterole` | Sets a name of the role which will be assigned to people who should be muted. Default is ene-mute. **Requires ManageRoles server permission.** | `.setmuterole Silenced`
  MuteCommands | `.mute` | Mutes a mentioned user both from speaking and chatting. You can also specify time string for how long the user should be muted. **Requires ManageRoles server permission.** **Requires MuteMembers server permission.** | `.mute @Someone` or `.mute 1h30m @Someone`
  MuteCommands | `.unmute` | Unmutes a mentioned user previously muted with `.mute` command. **Requires ManageRoles server permission.** **Requires MuteMembers server permission.** | `.unmute @Someone`
@@ -60,8 +60,6 @@ Submodule | Commands and aliases | Description | Usage
  ProtectionCommands | `.antispamignore` | Toggles whether antispam ignores current channel. Antispam must be enabled. **Requires Administrator server permission.** | `.antispamignore`
  ProtectionCommands | `.antilist` `.antilst` | Shows currently enabled protection features.  | `.antilist`
  PruneCommands | `.prune` `.clear` | `.prune` removes all Ene's messages in the last 100 messages. `.prune X` removes last `X` number of messages from the channel (up to 100). `.prune @Someone` removes all Someone's messages in the last 100 messages. `.prune @Someone X` removes last `X` number of 'Someone's' messages in the channel.  | `.prune` or `.prune 5` or `.prune @Someone` or `.prune @Someone X`
- SlowModeCommands | `.slowmode` | Toggles slowmode. Slowmode deletes any excess messages users type over the specified limit of messages per X seconds. To enable, specify a number of messages (-m) each user can send, and an interval in seconds (-s).  Disable by specifying no parameters. **Requires ManageMessages server permission.** | `.slowmode -m 1 -s 5` or `.slowmode`
- SlowModeCommands | `.slowmodewl` | Ignores a role or a user from the slowmode feature. **Requires ManageMessages server permission.** | `.slowmodewl SomeRole` or `.slowmodewl AdminDude`
  RoleCommands | `.reactionroles` `.rero` | Specify role names and server emojis with which they're represented, the bot will then add those emojis to the previous message in the channel, and users will be able to get the roles by clicking on the emoji. You can set 'excl' as the first parameter to make them exclusive. You can have up to 5 of these enabled on one server at a time. **Requires ManageRoles server permission.** | `.reactionroles Gamer :SomeServerEmoji: Streamer :Other: Watcher :Other2:` or `.reactionroles excl Horde :Horde: Alliance :Alliance:`
  RoleCommands | `.reactionroleslist` `.reroli` | Lists all ReactionRole messages on this channel and their indexes. **Requires ManageRoles server permission.** | `.reactionroleslist`
  RoleCommands | `.reactionrolesremove` `.rerorm` | Removed a ReactionRole message on the specified index. **Requires ManageRoles server permission.** | `.rerorm 1`
@@ -115,6 +113,8 @@ Submodule | Commands and aliases | Description | Usage
  ServerGreetCommands | `.bye` | Toggles anouncements on the current channel when someone leaves the server. **Requires ManageServer server permission.** | `.bye`
  ServerGreetCommands | `.byemsg` | Sets a new leave announcement message. Type `%user%` if you want to show the name the user who left. Type `%id%` to show id. Using this command with no message will show the current bye message. You can use embed json from <https://gremagol.com/embed-generator> instead of a regular text, if you want the message to be embedded. **Requires ManageServer server permission.** | `.byemsg %user% has left.`
  ServerGreetCommands | `.byedel` | Sets the time it takes (in seconds) for bye messages to be auto-deleted. Set it to `0` to disable automatic deletion. **Requires ManageServer server permission.** | `.byedel 0` or `.byedel 30`
+ SlowmodeCommands | `.slowmode` | Toggles slowmode. Slowmode deletes any excess messages users type over the specified limit of messages per X seconds. To enable, specify a number of messages (-m) each user can send, and an interval in seconds (-s).  Disable by specifying no parameters. **Requires ManageMessages server permission.** | `.slowmode -m 1 -s 5` or `.slowmode`
+ SlowmodeCommands | `.slowmodewl` | Ignores a role or a user from the slowmode feature. **Requires ManageMessages server permission.** | `.slowmodewl SomeRole` or `.slowmodewl AdminDude`
  TimeZoneCommands | `.timezones` | Lists all timezones available on the system to be used with `.timezone`.  | `.timezones`
  TimeZoneCommands | `.timezone` | Sets this guilds timezone. This affects bot's time output in this server (logs, etc..)  | `.timezone` or `.timezone GMT Standard Time`
  UserPunishCommands | `.warn` | Warns a user. **Requires BanMembers server permission.** | `.warn @b1nzy Very rude person`
@@ -133,13 +133,6 @@ Submodule | Commands and aliases | Description | Usage
 
 ###### [Back to ToC](#table-of-contents)
 
-### CryptoCommands  
-Submodule | Commands and aliases | Description | Usage
-----------|----------------|--------------|-------
- CryptoCommands | `.crypto` `.c` | Shows basic stats about a cryptocurrency from coinmarketcap.com. You can use either a name or an abbreviation of the currency.  | `.c btc` or `.c bitcoin`
-
-###### [Back to ToC](#table-of-contents)
-
 ### CustomReactions  
 Submodule | Commands and aliases | Description | Usage
 ----------|----------------|--------------|-------
@@ -152,6 +145,7 @@ Submodule | Commands and aliases | Description | Usage
  CustomReactions | `.crca` | Toggles whether the custom reaction will trigger if the triggering message contains the keyword (instead of only starting with it).  | `.crca 44`
  CustomReactions | `.crdm` | Toggles whether the response message of the custom reaction will be sent as a direct message.  | `.crdm 44`
  CustomReactions | `.crad` | Toggles whether the message triggering the custom reaction will be automatically deleted.  | `.crad 59`
+ CustomReactions | `.crsreload` | Reloads all custom reactions on all shards. Use this if you've made changes to the database while the bot is running, or used `.deleteunusedcrnq` **Bot owner only** | `.crsreload`
  CustomReactions | `.crclear` | Deletes all custom reactions on this server. **Requires Administrator server permission.** | `.crclear`
 
 ###### [Back to ToC](#table-of-contents)
@@ -193,7 +187,7 @@ Submodule | Commands and aliases | Description | Usage
  FlipCoinCommands | `.betflip` `.bf` | Bet to guess will the result be heads or tails. Guessing awards you 1.95x the currency you've bet (rounded up). Multiplier can be changed by the bot owner.  | `.bf 5 heads` or `.bf 3 t`
  FlowerShopCommands | `.shop` | Lists this server's administrators' shop. Paginated.  | `.shop` or `.shop 2`
  FlowerShopCommands | `.buy` | Buys an item from the shop on a given index. If buying items, make sure that the bot can DM you.  | `.buy 2`
- FlowerShopCommands | `.shopadd` | Adds an item to the shop by specifying type price and name. Available types are role and list. **Requires Administrator server permission.** | `.shopadd role 1000 Rich`
+ FlowerShopCommands | `.shopadd` | Adds an item to the shop by specifying type price and name. Available types are role and list. 90% of currency from each purchase will be received by the user who added the item to the shop. **Requires Administrator server permission.** | `.shopadd role 1000 Rich`
  FlowerShopCommands | `.shoplistadd` | Adds an item to the list of items for sale in the shop entry given the index. You usually want to run this command in the secret channel, so that the unique items are not leaked. **Requires Administrator server permission.** | `.shoplistadd 1 Uni-que-Steam-Key`
  FlowerShopCommands | `.shoprem` `.shoprm` | Removes an item from the shop by its ID. **Requires Administrator server permission.** | `.shoprm 1`
  SlotCommands | `.slotstats` | Shows the total stats of the slot command for this bot's session. **Bot owner only** | `.slotstats`
@@ -363,13 +357,12 @@ Submodule | Commands and aliases | Description | Usage
  Searches | `.weather` `.we` | Shows weather data for a specified city. You can also specify a country after a comma.  | `.we Moscow, RU`
  Searches | `.time` | Shows the current time and timezone in the specified location.  | `.time London, UK`
  Searches | `.youtube` `.yt` | Searches youtubes and shows the first result  | `.yt query`
- Searches | `.imdb` `.omdb` | Queries omdb for movies or series, show first result.  | `.imdb Batman vs Superman`
+ Searches | `.movie` `.omdb` `.imdb` | Queries omdb for movies or series, show first result.  | `.imdb Batman vs Superman`
  Searches | `.randomcat` `.meow` | Shows a random cat image.  | `.meow`
  Searches | `.randomdog` `.woof` | Shows a random dog image.  | `.woof`
  Searches | `.randomfood` `.yum` | Shows a random food image.  | `.yum`
  Searches | `.randombird` `.birb` `.bird` | Shows a random bird image.  | `.birb`
- Searches | `.image` `.img` | Pulls the first image found using a search parameter. Use `.rimg` for different results.  | `.img cute kitten`
- Searches | `.randomimage` `.rimg` | Pulls a random image using a search parameter.  | `.rimg cute kitten`
+ Searches | `.image` `.img` `.rimg` | Pulls a random image using a search parameter.  | `.rimg cute kitten`
  Searches | `.lmgtfy` | Google something for an idiot.  | `.lmgtfy query`
  Searches | `.shorten` | Attempts to shorten an URL, if it fails, returns the input URL.  | `.shorten https://google.com`
  Searches | `.google` `.g` | Get a Google search link for some terms.  | `.google query`
@@ -384,7 +377,6 @@ Submodule | Commands and aliases | Description | Usage
  Searches | `.safebooru` | Shows a random image from safebooru with a given tag. Tag is optional but preferred. (multiple tags are appended with +)  | `.safebooru yuri+kissing`
  Searches | `.wikipedia` `.wiki` | Gives you back a wikipedia link  | `.wiki query`
  Searches | `.color` `.clr` | Shows you pictures of colors which correspond to the inputed hex values. Max 10.  | `.color 00ff00` or `.color f00 0f0 00f`
- Searches | `.videocall` | Creates a private <http://www.appear.in> video call link for you and other mentioned people. The link is sent to mentioned people via a private message.  | `.videocall "@the First" "@Xyz"`
  Searches | `.avatar` `.av` | Shows a mentioned person's avatar.  | `.av @SomeGuy`
  Searches | `.wikia` | Gives you back a wikia link  | `.wikia mtg Vigilance` or `.wikia mlp Dashy`
  Searches | `.bible` | Shows bible verse. You need to supply book name and chapter:verse  | `.bible genesis 3:19`
@@ -392,6 +384,7 @@ Submodule | Commands and aliases | Description | Usage
  AnimeSearchCommands | `.mal` | Shows basic info from a MyAnimeList profile.  | `.mal straysocks`
  AnimeSearchCommands | `.anime` `.ani` `.aq` | Queries anilist for an anime and shows the first result.  | `.ani aquarion evol`
  AnimeSearchCommands | `.manga` `.mang` `.mq` | Queries anilist for a manga and shows the first result.  | `.mq Shingeki no kyojin`
+ CryptoCommands | `.crypto` `.c` | Shows basic stats about a cryptocurrency from coinmarketcap.com. You can use either a name or an abbreviation of the currency.  | `.c btc` or `.c bitcoin`
  FeedCommands | `.feed` `.feedadd` | Subscribes to a feed. Bot will post an update up to once every 10 seconds. You can have up to 10 feeds on one server. All feeds must have unique URLs. **Requires ManageMessages server permission.** | `.feed https://www.rt.com/rss/`
  FeedCommands | `.feedremove` `.feedrm` `.feeddel` | Stops tracking a feed on the given index. Use `.feeds` command to see a list of feeds and their indexes. **Requires ManageMessages server permission.** | `.feedremove 3`
  FeedCommands | `.feeds` `.feedlist` | Shows the list of feeds you've subscribed to on this server. **Requires ManageMessages server permission.** | `.feeds`
